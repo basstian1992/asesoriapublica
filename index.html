@@ -18,39 +18,38 @@
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
 
-  <header class="topbar">
-    <div class="container topbar__inner">
+ <header class="topbar">
+  <div class="container topbar__inner">
     <div class="brand">
-<img 
-  class="brand__mark brand__mark--solo" 
-  src="assets/logo.png" 
-  alt=""
-/>
+      <img
+        class="brand__mark brand__mark--solo"
+        src="assets/logo.png"
+        alt="Asesoría Pública"
+      />
+    </div>
+
+    <nav class="nav" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#confianza">Confianza</a>
+      <a href="#faq">Preguntas</a>
+      <a class="btn btn--sm btn--ghost" href="#contacto">Contacto</a>
+    </nav>
+
+    <button class="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-      </div>
 
-      
-      <nav class="nav" aria-label="Principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#confianza">Confianza</a>
-        <a href="#faq">Preguntas</a>
-        <a class="btn btn--sm btn--ghost" href="#contacto">Contacto</a>
-      </nav>
-
-      <button class="menuBtn" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+  <div class="mobileMenu" hidden>
+    <div class="container mobileMenu__inner">
+      <a href="#servicios">Servicios</a>
+      <a href="#confianza">Confianza</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--block" href="#contacto">Contacto</a>
     </div>
+  </div>
+</header>
 
-    <div class="mobileMenu" hidden>
-      <div class="container mobileMenu__inner">
-        <a href="#servicios">Servicios</a>
-        <a href="#confianza">Confianza</a>
-        <a href="#faq">FAQ</a>
-        <a class="btn btn--block" href="#contacto">Contacto</a>
-      </div>
-    </div>
-  </header>
 
   <main id="contenido">
     <!-- HERO -->
@@ -72,7 +71,13 @@
           </p>
 
           <div class="hero__cta">
-            <a class="btn" id="ctaWhatsappTop" href="#" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+            <a class="btn"
+   id="ctaWhatsappTop"
+   href="https://wa.me/56937307016?text=Hola%2C%20quiero%20cotizar%20un%20servicio%20en%20Asesor%C3%ADa%20P%C3%BAblica."
+   target="_blank" rel="noopener">
+  Cotizar por WhatsApp
+</a>
+
             <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
           </div>
 
@@ -726,7 +731,13 @@ Revisamos el finiquito, calculamos lo correcto y negociamos o judicializamos si 
             </p>
 
             <div class="ctaBox__actions">
-              <a class="btn" id="ctaWhatsappBottom" href="#" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn"
+   id="ctaWhatsappBottom"
+   href="https://wa.me/56937307016?text=Hola%2C%20quiero%20cotizar%20un%20servicio%20en%20Asesor%C3%ADa%20P%C3%BAblica."
+   target="_blank" rel="noopener">
+  WhatsApp
+</a>
+
               <a class="btn btn--ghost" href="mailto:contacto@asesoriapublica.cl">Correo</a>
             </div>
 
