@@ -50,7 +50,27 @@ a:hover{opacity:.92}
 .topbar__inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:14px}
 
 .brand{display:flex; align-items:center; gap:12px}
-.brand__mark{width:36px; height:36px}
+.brand__mark,
+.brand__mark--solo{
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.topbar{
+  overflow: visible;
+}
+@media (max-width: 720px){
+  .brand__mark,
+  .brand__mark--solo{
+    height: 36px;
+  }
+}
+
 .brand__name{font-weight:800; letter-spacing:.2px}
 .brand__tag{font-size:12px; color:var(--muted2)}
 
