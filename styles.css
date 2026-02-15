@@ -52,13 +52,22 @@ a:hover{opacity:.92}
 }
 
 .brand{display:flex; align-items:center; gap:12px}
+/* ===== LOGO ===== */
+
 .brand__mark{
-  height:48px;
-  width:auto;
-  max-width:220px;
-  object-fit:contain;
-  display:block;
+  height: 56px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
 }
+
+@media (max-width: 720px){
+  .brand__mark{
+    height: 42px;
+    max-width: 200px;
+  }
+}
+
 
 .nav{display:flex; gap:18px; align-items:center}
 .nav a{font-size:14px; color:var(--muted)}
@@ -171,6 +180,45 @@ input,select,textarea{
 
 @media (max-width: 720px){
 /* FAQ móvil */
+  @media (max-width: 720px){
+
+  body{
+    font-size: 15px;
+  }
+
+  .hero__title{
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .hero__lead{
+    font-size: 15px;
+  }
+
+  .hero__cta{
+    flex-direction: column;
+  }
+
+  .hero__cta .btn{
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .section{
+    padding: 32px 0;
+  }
+
+  .card,
+  .feature{
+    padding: 14px;
+  }
+
+  p{
+    font-size: 15px;
+  }
+}
+
   .confianza-grid{
   grid-template-columns: 1fr;
 }
@@ -296,12 +344,17 @@ p{
 }
 /* ===== FAQ ORDENADO ===== */
 
-.faq--ordenado{
+/* ===== FAQ PROFESIONAL ===== */
+
+.faq{
   display: grid;
   gap: 14px;
 }
 
 .faq details{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
   padding: 16px 18px;
 }
 
@@ -317,35 +370,71 @@ p{
 }
 
 .faq summary::after{
-  content: "＋";
+  content: "▼";
   float: right;
-  font-size: 18px;
-  color: var(--muted2);
+  font-size: 12px;
+  opacity: .6;
 }
 
 .faq details[open] summary::after{
-  content: "−";
+  content: "▲";
 }
 
 .faq__body{
   margin-top: 12px;
   font-size: 14px;
-  color: var(--muted);
-  line-height: 1.7;
   white-space: pre-line;
 }
+/* FAQ móvil */
+.faq summary{
+  font-size: 14px;
+}
+
+.faq__body{
+  font-size: 14px;
+}
+
 /* ===== FOTO SECCIÓN CONFIANZA ===== */
 
 .confianza-grid{
   align-items: start;
 }
 
+/* ===== FOTO CONFIANZA (TAMAÑO PROFESIONAL) ===== */
+
+.confianza-foto{
+  display: flex;
+  justify-content: center;
+}
+
 .confianza-foto img{
   width: 100%;
-  max-width: 320px;
-  border-radius: 18px;
+  max-width: 240px;   /* 👈 límite real */
+  height: auto;
+  border-radius: 16px;
   border: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
 }
+@media (max-width: 720px){
+  .confianza-foto{
+    margin-bottom: 16px;
+  }
+
+  .confianza-foto img{
+    max-width: 180px;
+  }
+}
+/* ===== ORDEN Y JUSTIFICACIÓN DE TEXTOS ===== */
+
+p,
+.feature p,
+.card p,
+.faq__body{
+  text-align: justify;
+  line-height: 1.75;
+  margin-bottom: 14px;
+  hyphens: auto;
+}
+
 
 
