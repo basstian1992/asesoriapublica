@@ -171,6 +171,16 @@ input,select,textarea{
 
 @media (max-width: 720px){
 /* FAQ móvil */
+  .confianza-grid{
+  grid-template-columns: 1fr;
+}
+
+.confianza-foto{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
 .faq summary{
   font-size: 14px;
 }
@@ -323,6 +333,19 @@ p{
   color: var(--muted);
   line-height: 1.7;
   white-space: pre-line;
+}
+/* ===== FOTO SECCIÓN CONFIANZA ===== */
+
+.confianza-grid{
+  align-items: start;
+}
+
+.confianza-foto img{
+  width: 100%;
+  max-width: 320px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
 }
 
 
