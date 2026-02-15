@@ -170,6 +170,14 @@ input,select,textarea{
 /* ========================= */
 
 @media (max-width: 720px){
+/* FAQ móvil */
+.faq summary{
+  font-size: 14px;
+}
+
+.faq__body{
+  font-size: 14px;
+}
 
   .container{
     width: calc(100% - 24px);
@@ -275,6 +283,46 @@ p{
 .feature p + p,
 .faq__body p + p{
   margin-top: 10px;
+}
+/* ===== FAQ ORDENADO ===== */
+
+.faq--ordenado{
+  display: grid;
+  gap: 14px;
+}
+
+.faq details{
+  padding: 16px 18px;
+}
+
+.faq summary{
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq summary::marker{
+  display: none;
+}
+
+.faq summary::after{
+  content: "＋";
+  float: right;
+  font-size: 18px;
+  color: var(--muted2);
+}
+
+.faq details[open] summary::after{
+  content: "−";
+}
+
+.faq__body{
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  white-space: pre-line;
 }
 
 
