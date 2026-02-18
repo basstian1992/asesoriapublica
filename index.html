@@ -541,44 +541,54 @@
               Consejo: incluye <strong>qué necesitas</strong>, <strong>comuna/ciudad</strong> y <strong>plazo</strong>.
             </p>
           </div>
+<form class="form"
+      action="mailto:b.alarconatenas@gmail.com"
+      method="POST"
+      enctype="text/plain">
 
-          <form class="form" id="contactForm">
-            <div class="form__row">
-              <label>
-                Nombre
-                <input name="nombre" required placeholder="Tu nombre" />
-              </label>
-              <label>
-                WhatsApp / Teléfono
-                <input name="telefono" required placeholder="Fono" />
-              </label>
-            </div>
+  <div class="form__row">
+    <label>
+      Nombre
+      <input name="Nombre" required placeholder="Tu nombre" />
+    </label>
 
-            <label>
-              Servicio de interés
-              <select name="servicio" required>
-                <option value="" selected disabled>Selecciona…</option>
-                <option>Constitución de empresa</option>
-                <option>Inicio de actividades SII</option>
-                <option>Patente y Permisos</option>
-                <option>Transferencia de vehículo</option>
-                <option>Contratos / compraventa inmueble</option>
-                <option>Consultoría pública</option>
-                <option>Digitalización ERP / IA</option>
-                <option>Otro</option>
-              </select>
-            </label>
+    <label>
+      WhatsApp / Teléfono
+      <input name="Telefono" required placeholder="+569..." />
+    </label>
+  </div>
 
-            <label>
-              Mensaje
-              <textarea name="mensaje" required rows="5" placeholder="Cuéntame tu caso y el plazo…"></textarea>
-            </label>
+  <label>
+    Servicio de interés
+    <select name="Servicio" required>
+      <option value="" selected disabled>Selecciona…</option>
+      <option>Constitución de empresa</option>
+      <option>Inicio de actividades SII</option>
+      <option>Patente y Permisos</option>
+      <option>Transferencia de vehículo</option>
+      <option>Contratos / Inmuebles</option>
+      <option>Consultoría pública</option>
+      <option>Digitalización ERP / IA</option>
+      <option>Otro</option>
+    </select>
+  </label>
 
-            <button class="btn btn--block" type="submit">Enviar mensaje</button>
-            <p class="form__hint">
-              Este formulario abre tu correo para enviar el mensaje (sin servidores externos).
-            </p>
-          </form>
+  <label>
+    Mensaje
+    <textarea name="Mensaje" required rows="5"
+      placeholder="Cuéntame tu caso, comuna y plazo…"></textarea>
+  </label>
+
+  <button class="btn btn--block" type="submit">
+    Enviar mensaje
+  </button>
+
+  <p class="form__hint">
+    Al enviar, se abrirá tu correo para completar el envío.
+  </p>
+</form>
+
+  
         </div>
       </div>
     </section>
