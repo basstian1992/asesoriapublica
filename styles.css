@@ -162,6 +162,29 @@ p{margin:0 0 var(--s3)}
 }
 .btn--sm{padding:10px 12px; border-radius:12px; font-size:14px}
 .btn--block{width:100%}
+/* ===== BOTONES ===== */
+
+.btn{
+  min-height: 46px;
+  font-size: 15px;
+  letter-spacing: .2px;
+}
+
+.hero__cta,
+.ctaBox__actions{
+  gap: 14px;
+}
+
+@media (max-width: 720px){
+  .hero__cta,
+  .ctaBox__actions{
+    flex-direction: column;
+  }
+
+  .btn{
+    width: 100%;
+  }
+}
 
 /* ===========================
    Hero
@@ -429,6 +452,32 @@ textarea{resize:vertical}
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+/* ===== MEJORA GLOBAL DE TEXTO ===== */
+
+.richtext p{
+  margin-bottom: 14px;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+.richtext ul{
+  margin: 10px 0 14px 18px;
+}
+
+.richtext li{
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+/* Títulos con más aire */
+.section__head h2{
+  margin-bottom: 6px;
+}
+
+.section__head p{
+  margin-top: 0;
+  line-height: 1.7;
 }
 
 
