@@ -480,4 +480,36 @@ textarea{resize:vertical}
   line-height: 1.7;
 }
 
+/* ===== FAQ MEJORADO ===== */
+
+.faq details{
+  margin-bottom: 12px;
+}
+
+.faq summary{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  gap: 12px;
+}
+
+.faq summary .q{
+  font-weight: 700;
+}
+
+.faq__body{
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.faq__body p:first-child{
+  margin-top: 0;
+}
+
+@media (max-width: 720px){
+  .faq summary{
+    font-size: 14px;
+  }
+}
 
