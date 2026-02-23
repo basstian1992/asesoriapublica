@@ -1,7 +1,6 @@
-/* ===========================
-   Asesoría Pública — UI Pro
-   =========================== */
-
+/* =========================================================
+   VARIABLES GLOBALES
+   ========================================================= */
 :root{
   --bg:#070b16;
   --bg2:#0b1020;
@@ -24,7 +23,7 @@
 
   --container: 1120px;
 
-  /* sistema de espacios */
+  /* Sistema de espacios */
   --s1: 6px;
   --s2: 10px;
   --s3: 14px;
@@ -34,8 +33,12 @@
   --s7: 44px;
 }
 
+/* =========================================================
+   BASE
+   ========================================================= */
 *{box-sizing:border-box}
 html,body{height:100%}
+
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -51,46 +54,38 @@ body{
 }
 
 a{color:inherit; text-decoration:none}
-a:hover{opacity:.94}
+a:hover{opacity:.95}
 
 .container{
   width:min(var(--container), calc(100% - 40px));
   margin:0 auto;
 }
 
-.skip{
-  position:absolute; left:-999px; top:10px;
-  background:#fff; color:#000; padding:10px 12px; border-radius:10px;
-}
-.skip:focus{left:10px; z-index:9999}
-
-/* ===========================
-   Tipografía y espaciado global
-   =========================== */
-
+/* =========================================================
+   TIPOGRAFÍA GLOBAL
+   ========================================================= */
 h1,h2,h3{margin:0 0 var(--s3); letter-spacing:-.2px}
-p{margin:0 0 var(--s3)}
-/* “ordenado/justificado” sin que se vea feo */
-.richtext, .feature p, .faq__body, .card p{
-  text-align: justify;
-  hyphens: auto;
-  line-height: 1.75;
+p{margin:0 0 var(--s3); max-width:72ch}
+
+/* Justificado SOLO en desktop */
+@media (min-width:769px){
+  .richtext,
+  .feature p,
+  .faq__body,
+  .card p{
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.75;
+  }
 }
-.richtext > *:last-child{margin-bottom:0}
 
-/* Listas dentro de textos largos (FAQ / Confianza) */
-.richtext ul, .richtext ol{
-  margin: 0 0 var(--s3);
-  padding-left: 18px;
-}
-.richtext li{margin: 0 0 8px}
-
-/* ===========================
-   Header / Topbar
-   =========================== */
-
+/* =========================================================
+   HEADER
+   ========================================================= */
 .topbar{
-  position:sticky; top:0; z-index:50;
+  position:sticky;
+  top:0;
+  z-index:50;
   backdrop-filter: blur(14px);
   background: rgba(5,8,20,.58);
   border-bottom:1px solid rgba(255,255,255,.08);
@@ -106,225 +101,125 @@ p{margin:0 0 var(--s3)}
 
 .brand{display:flex; align-items:center; gap:12px}
 .brand__mark{
-  height: 54px;            /* ✅ logo más visible */
-  width: auto;
-  max-width: 260px;
-  object-fit: contain;
-  display:block;
+  height: 52px;
+  width:auto;
+  max-width:240px;
+  object-fit:contain;
 }
 
-.nav{display:flex; gap:18px; align-items:center}
-.nav a{font-size:14px; color:var(--muted)}
-.nav a:hover{color:var(--text)}
-
-.menuBtn{
-  display:none;
-  background:transparent;
-  border:1px solid rgba(255,255,255,.10);
-  padding:10px;
-  border-radius:12px;
-}
-.menuBtn span{
-  display:block; width:22px; height:2px;
-  background:rgba(255,255,255,.85);
-  margin:5px 0; border-radius:2px
-}
-
-.mobileMenu{border-top:1px solid rgba(255,255,255,.08); background: rgba(5,8,20,.78)}
-.mobileMenu__inner{display:flex; flex-direction:column; gap:10px; padding:14px 0}
-.mobileMenu a{padding:10px 12px; border-radius:12px; color:var(--muted)}
-.mobileMenu a:hover{background:rgba(255,255,255,.06); color:var(--text)}
-
-/* ===========================
-   Botones (arregla “desorden”)
-   =========================== */
-
+/* =========================================================
+   BOTONES
+   ========================================================= */
 .btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  gap: 10px;
-  padding: 12px 16px;
-  border-radius: 14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:14px 18px;
+  border-radius:14px;
   background: linear-gradient(135deg, rgba(77,163,255,.95), rgba(177,119,255,.95));
   color:#0a0e1c;
-  font-weight: 800;
+  font-weight:800;
   border:1px solid rgba(255,255,255,.12);
   box-shadow: 0 12px 26px rgba(77,163,255,.10);
   transition: transform .12s ease, filter .12s ease;
 }
-.btn:hover{filter:saturate(1.05); transform: translateY(-1px)}
-.btn:active{transform: translateY(0px)}
-
+.btn:hover{transform:translateY(-1px)}
 .btn--ghost{
-  background: rgba(255,255,255,.045);
+  background: rgba(255,255,255,.05);
   color: var(--text);
-  border:1px solid rgba(255,255,255,.16);
   box-shadow:none;
 }
-.btn--sm{padding:10px 12px; border-radius:12px; font-size:14px}
 .btn--block{width:100%}
-/* ===== BOTONES ===== */
 
-.btn{
-  min-height: 46px;
-  font-size: 15px;
-  letter-spacing: .2px;
-}
-
-.hero__cta,
-.ctaBox__actions{
-  gap: 14px;
-}
-
-@media (max-width: 720px){
-  .hero__cta,
-  .ctaBox__actions{
-    flex-direction: column;
-  }
-
-  .btn{
-    width: 100%;
-  }
-}
-@media (max-width: 768px){
-  .lineasTrabajo__list{
-    grid-template-columns:1fr;
-  }
-
-  .lineasTrabajo h3{
-    font-size:18px;
-  }
-
-  .lineasTrabajo__list li{
-    flex-direction:row;
-    justify-content:center;
-    gap:12px;
-  }
-
-  .lineasTrabajo__list .icon{
-    font-size:22px;
-  }
-
-  .lineasTrabajo__list .text{
-    font-size:15px;
-  }
-}
-/* ===========================
-   Hero
-   =========================== */
-
+/* =========================================================
+   HERO
+   ========================================================= */
 .hero{
-  padding: var(--s7) 0 var(--s5);
-  position:relative;
-  overflow:hidden;
+  padding: var(--s7) 0 var(--s6);
 }
 
 .hero__grid{
   display:grid;
-  grid-template-columns: 1.08fr .92fr;
+  grid-template-columns: 1.1fr .9fr;
   gap: var(--s6);
   align-items:center;
 }
 
-.pill{
-  display:inline-flex; align-items:center; gap:10px;
-  background: rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.10);
-  padding:8px 12px;
-  border-radius:999px;
-  color:var(--muted);
-  font-size:13px;
-}
-.dot{width:10px; height:10px; border-radius:99px; background:linear-gradient(135deg,var(--blue),var(--violet))}
-
 .hero__title{
-  font-size: 44px;
-  line-height: 1.10;
-  margin: var(--s3) 0 var(--s2);
+  font-size:44px;
+  line-height:1.1;
 }
 
 .hero__lead{
   color:var(--muted);
-  font-size: 16px;
-  margin: 0 0 var(--s4);
-  max-width: 62ch;
+  margin-bottom:var(--s4);
 }
 
 .hero__cta{
   display:flex;
   gap: var(--s3);
-  flex-wrap: wrap;
-  margin-bottom: var(--s4);
+  flex-wrap:wrap;
 }
 
-/* ===========================
-   Secciones / Layout
-   =========================== */
-
+/* =========================================================
+   SECCIONES
+   ========================================================= */
 .section{padding: var(--s7) 0}
+
 .section--alt{
-  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
-  border-top: 1px solid rgba(255,255,255,.06);
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  background: linear-gradient(180deg, rgba(255,255,255,.02), transparent);
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-.section__head{display:flex; flex-direction:column; gap:8px; margin-bottom: var(--s5)}
-.section__head h2{font-size: 30px}
-.section__head p{color:var(--muted); max-width: 80ch}
+.section__head{
+  margin-bottom: var(--s5);
+}
 
+.section__head h2{font-size:30px}
+.section__head p{color:var(--muted)}
+
+/* =========================================================
+   CARDS / FEATURES
+   ========================================================= */
 .cards{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:repeat(3,1fr);
   gap: var(--s4);
 }
 
-.card{
+.card,
+.feature{
   background: var(--card);
   border:1px solid var(--stroke);
   border-radius: var(--radius);
   padding: var(--s5);
-  min-height: 148px;
-  box-shadow: 0 10px 20px rgba(0,0,0,.18);
-}
-.card__icon{font-size:22px; margin-bottom:10px}
-.card h3{font-size:16px; margin-bottom: 6px}
-.card p{color:var(--muted); font-size:14px}
-
-.grid2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--s4);
-  align-items:start;
+  transition: transform .15s ease;
 }
 
-.feature{
-  background: var(--card);
-  border: 1px solid var(--stroke);
-  border-radius: var(--radius);
-  padding: var(--s5);
+.card:hover,
+.feature:hover{
+  transform: translateY(-2px);
 }
-.feature h3{font-size:16px}
-.feature p{color:var(--muted); font-size:14px}
 
-/* ===========================
-   Confianza: foto en tamaño pro
-   =========================== */
+/* =========================================================
+   FOTO CONFIANZA
+   ========================================================= */
 .confianza-foto{
   display:flex;
   justify-content:center;
 }
 .confianza-foto img{
+  max-width:220px;
   width:100%;
-  max-width: 220px;        /* ✅ ya no gigante */
-  height:auto;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  border-radius:16px;
+  box-shadow: var(--shadow);
 }
 
-/* ===========================
-   FAQ — orden premium
-   =========================== */
-
+/* =========================================================
+   FAQ
+   ========================================================= */
 .faq{
   display:grid;
   gap: var(--s4);
@@ -332,429 +227,113 @@ p{margin:0 0 var(--s3)}
 
 .faq details{
   background: var(--card);
-  border: 1px solid var(--stroke);
-  border-radius: 16px;
-  padding: 16px 18px;
+  border:1px solid var(--stroke);
+  border-radius:16px;
+  padding:16px 18px;
 }
 
 .faq summary{
   cursor:pointer;
-  font-weight: 900;
-  font-size: 15px;
-  list-style:none;
+  font-weight:800;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap: 12px;
+  gap:12px;
 }
-.faq summary::marker{display:none}
-
-.faq summary .q{flex:1; color: var(--text)}
-.faq summary .chev{
-  width: 30px; height: 30px;
-  border-radius: 10px;
-  display:flex; align-items:center; justify-content:center;
-  border:1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.04);
-  color: rgba(255,255,255,.85);
-  flex: none;
-  transition: transform .12s ease;
-}
-.faq details[open] summary .chev{transform: rotate(180deg)}
 
 .faq__body{
-  margin-top: 12px;
-  font-size: 14px;
-  color: var(--muted);
-  white-space: pre-line;
+  margin-top:12px;
+  color:var(--muted);
+  white-space:pre-line;
 }
 
-/* ===========================
-   Contacto / CTA Box
-   =========================== */
-
-.ctaBox{
-  display:grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: var(--s4);
-  background: linear-gradient(135deg, rgba(77,163,255,.10), rgba(177,119,255,.08));
-  border:1px solid rgba(255,255,255,.12);
-  border-radius: 22px;
-  padding: var(--s5);
-  box-shadow: var(--shadow);
+.faq-cta{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px dashed rgba(255,255,255,.15);
 }
-.ctaBox__copy h2{font-size:28px; margin-bottom: 6px}
-.ctaBox__copy p{color:var(--muted); margin-bottom: var(--s3)}
-.ctaBox__actions{display:flex; gap: var(--s3); flex-wrap:wrap; margin: var(--s3) 0}
 
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
 .form{
   background: rgba(0,0,0,.18);
   border:1px solid rgba(255,255,255,.10);
-  border-radius: 18px;
-  padding: var(--s4);
+  border-radius:18px;
+  padding: var(--s5);
 }
-.form label{display:flex; flex-direction:column; gap:6px; font-size:13px; color:var(--muted)}
-.form__row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+
+.form__row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
 input,select,textarea{
-  padding: 12px 12px;
-  border-radius: 14px;
+  padding:14px;
+  border-radius:14px;
   border:1px solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.04);
   color: var(--text);
-  outline:none;
 }
-input:focus,select:focus,textarea:focus{
-  border-color: rgba(77,163,255,.40);
-  box-shadow:0 0 0 4px rgba(77,163,255,.10)
-}
-textarea{resize:vertical}
 
-/* ===========================
-   Footer
-   =========================== */
-
+/* =========================================================
+   FOOTER
+   ========================================================= */
 .footer{
-  padding: 26px 0;
+  padding:26px 0;
   border-top:1px solid rgba(255,255,255,.08);
   background: rgba(5,8,20,.35);
 }
-.footer__inner{display:flex; align-items:center; justify-content:space-between; gap:12px}
-.footer__small{color:var(--muted2); font-size:12px; margin-top:2px}
-.footer__links{display:flex; gap:14px; color:var(--muted); font-size:13px}
-.footer__links a:hover{color:var(--text)}
 
-/* ===========================
-   Responsive (MEJORADO REAL)
-   =========================== */
-
-@media (max-width: 980px){
-  .hero__grid{grid-template-columns: 1fr}
-  .cards{grid-template-columns: 1fr 1fr}
-  .ctaBox{grid-template-columns: 1fr}
-}
-
-@media (max-width: 720px){
-  .container{width: calc(100% - 24px)}
-
-  .brand__mark{height: 42px; max-width: 200px}
-
-  .nav{display:none}
-  .menuBtn{display:block}
-
-  .hero{padding: 28px 0 18px}
-  .hero__title{font-size: 28px; line-height: 1.18}
-  .hero__lead{font-size: 15px}
-  .hero__cta{
-    flex-direction: column;   /* ✅ botones ordenados */
-    gap: 10px;
-  }
-  .hero__cta .btn{width:100%; padding: 14px; font-size: 16px}
-
-  .section{padding: 34px 0}
-  .section__head h2{font-size: 24px}
-
-  .cards{grid-template-columns: 1fr}
-  .card, .feature{padding: 14px}
-
-  .grid2{grid-template-columns: 1fr}
-  .confianza-foto{margin-bottom: 14px}
-  .confianza-foto img{max-width: 180px}
-
-  .form__row{grid-template-columns: 1fr}
-  input,select,textarea{font-size: 16px} /* evita zoom iOS */
-
-  .footer__inner{flex-direction: column; align-items:flex-start}
-}
-
-/* CTA dentro del FAQ */
-.faq-cta{
-  margin-top: 16px;
-  padding-top: 12px;
-  border-top: 1px dashed rgba(255,255,255,.15);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-/* ===== MEJORA GLOBAL DE TEXTO ===== */
-
-.richtext p{
-  margin-bottom: 14px;
-  line-height: 1.75;
-  text-align: justify;
-}
-
-.richtext ul{
-  margin: 10px 0 14px 18px;
-}
-
-.richtext li{
-  margin-bottom: 6px;
-  line-height: 1.6;
-}
-
-/* Títulos con más aire */
-.section__head h2{
-  margin-bottom: 6px;
-}
-
-.section__head p{
-  margin-top: 0;
-  line-height: 1.7;
-}
-
-/* ===== FAQ MEJORADO ===== */
-
-.faq details{
-  margin-bottom: 12px;
-}
-
-.faq summary{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 15px;
-  gap: 12px;
-}
-
-.faq summary .q{
-  font-weight: 700;
-}
-
-.faq__body{
-  margin-top: 10px;
-  padding-top: 10px;
-}
-
-.faq__body p:first-child{
-  margin-top: 0;
-}
-
-@media (max-width: 720px){
-  .faq summary{
-    font-size: 14px;
-  }
-}
-/* ===== WHATSAPP FLOTANTE ===== */
-
-.whatsapp-float{
-  position: fixed;
-  bottom: 18px;
-  right: 18px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #25D366;
-  color: #fff;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,.35);
-  z-index: 999;
-  text-decoration: none;
-}
-
-.whatsapp-float:hover{
-  transform: scale(1.05);
-}
-/* =========================
-   MEJORAS VERSION MOVIL
-   ========================= */
-@media (max-width: 768px){
-
-  /* --- Layout general --- */
-  body{
-    font-size:16px;
-    line-height:1.65;
-  }
-
-  .container{
-    padding-left:18px;
-    padding-right:18px;
-  }
-
-  section{
-    padding-top:40px;
-    padding-bottom:40px;
-  }
-
-  /* --- Títulos --- */
-  h1{
-    font-size:30px;
-    line-height:1.2;
-    margin-bottom:18px;
-  }
-
-  h2{
-    font-size:24px;
-    margin-bottom:14px;
-  }
-
-  h3{
-    font-size:18px;
-    margin-bottom:10px;
-  }
-
-  /* --- Párrafos --- */
-  p{
-    margin-bottom:16px;
-    text-align: left;
-  }
-
-  /* --- Botones --- */
-  .btn,
-  button{
-    width:100%;
-    padding:14px 16px;
-    font-size:16px;
-    margin-bottom:12px;
-  }
-
-  .hero__cta{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-  }
-
-  /* --- Imagen perfil / confianza --- */
-  .confianza__foto img,
-  .profile-photo,
-  .foto-perfil{
-    width:100%;
-    max-width:260px;
-    margin:0 auto 20px auto;
-    display:block;
-    border-radius:16px;
-  }
-
-  /* --- Sección confianza --- */
-  .grid2{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-  }
-
-  .feature{
-    padding:18px;
-  }
-
-  .feature p{
-    margin-bottom:14px;
-  }
-
-  /* --- FAQ --- */
-  .faq details{
-    margin-bottom:14px;
-    border-radius:14px;
-  }
-
-  .faq summary{
-    font-size:16px;
-    line-height:1.4;
-    padding:14px 16px;
-  }
-
-  .faq__body{
-    padding:16px;
-    font-size:15px;
-    line-height:1.6;
-  }
-
-  .faq__body p{
-    margin-bottom:14px;
-  }
-
-  /* CTA dentro del FAQ */
-  .faq__cta{
-    margin-top:18px;
-    padding-top:14px;
-    border-top:1px solid rgba(255,255,255,0.1);
-  }
-
-  .faq__cta .btn{
-    width:100%;
-  }
-
-  /* --- Formulario --- */
-  form{
-    padding:18px;
-  }
-
-  .form__row{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-  }
-
-  input,
-  select,
-  textarea{
-    font-size:16px;
-    padding:14px;
-  }
-
-  textarea{
-    min-height:120px;
-  }
-
-  /* --- Footer --- */
-  footer{
-    text-align:center;
-  }
-
-  footer a{
-    display:block;
-    margin:8px 0;
-  }
-}
-/* =========================
-   BLOQUE LINEAS DE TRABAJO
-   ========================= */
-.lineasTrabajo{
-  background: linear-gradient(
-    135deg,
-    rgba(77,163,255,.12),
-    rgba(177,119,255,.10)
-  );
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:18px;
-  padding:20px;
-  margin-top:20px;
-}
-
-.lineasTrabajo h3{
-  margin:0 0 14px;
-  font-size:20px;
-  font-weight:800;
-  text-align:center;
-}
-
-.lineasTrabajo__list{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
+.footer__inner{
+  display:flex;
+  justify-content:space-between;
   gap:14px;
 }
 
-.lineasTrabajo__list li{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:8px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:14px;
-  padding:14px 10px;
-  font-weight:700;
+/* =========================================================
+   MOBILE (UNIFICADO)
+   ========================================================= */
+@media (max-width:768px){
+
+  body{font-size:16px}
+
+  .container{width:calc(100% - 32px)}
+
+  .hero__grid{grid-template-columns:1fr}
+  .hero__title{font-size:30px}
+  .hero__cta{flex-direction:column}
+
+  .cards{grid-template-columns:1fr}
+
+  .form__row{grid-template-columns:1fr}
+
+  .section{padding:36px 0}
+
+  p{
+    text-align:left;
+    max-width:none;
+  }
+}
+[data-animate]{
+  opacity:0;
+  transform: translateY(16px);
+  transition: opacity .6s ease, transform .6s ease;
 }
 
-.lineasTrabajo__list .icon{
-  font-size:26px;
+[data-animate].is-visible{
+  opacity:1;
+  transform: translateY(0);
 }
+const elements = document.querySelectorAll('[data-animate]');
 
-.lineasTrabajo__list .text{
-  font-size:14px;
-  text-align:center;
-}
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+elements.forEach(el => observer.observe(el));
