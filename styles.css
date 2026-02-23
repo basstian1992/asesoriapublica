@@ -185,7 +185,29 @@ p{margin:0 0 var(--s3)}
     width: 100%;
   }
 }
+@media (max-width: 768px){
+  .lineasTrabajo__list{
+    grid-template-columns:1fr;
+  }
 
+  .lineasTrabajo h3{
+    font-size:18px;
+  }
+
+  .lineasTrabajo__list li{
+    flex-direction:row;
+    justify-content:center;
+    gap:12px;
+  }
+
+  .lineasTrabajo__list .icon{
+    font-size:22px;
+  }
+
+  .lineasTrabajo__list .text{
+    font-size:15px;
+  }
+}
 /* ===========================
    Hero
    =========================== */
@@ -684,4 +706,55 @@ textarea{resize:vertical}
     display:block;
     margin:8px 0;
   }
+}
+/* =========================
+   BLOQUE LINEAS DE TRABAJO
+   ========================= */
+.lineasTrabajo{
+  background: linear-gradient(
+    135deg,
+    rgba(77,163,255,.12),
+    rgba(177,119,255,.10)
+  );
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:18px;
+  padding:20px;
+  margin-top:20px;
+}
+
+.lineasTrabajo h3{
+  margin:0 0 14px;
+  font-size:20px;
+  font-weight:800;
+  text-align:center;
+}
+
+.lineasTrabajo__list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.lineasTrabajo__list li{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  padding:14px 10px;
+  font-weight:700;
+}
+
+.lineasTrabajo__list .icon{
+  font-size:26px;
+}
+
+.lineasTrabajo__list .text{
+  font-size:14px;
+  text-align:center;
 }
