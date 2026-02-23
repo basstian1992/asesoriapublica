@@ -541,10 +541,16 @@
               Consejo: incluye <strong>qué necesitas</strong>, <strong>comuna/ciudad</strong> y <strong>plazo</strong>.
             </p>
           </div>
-<form class="form"
-      action="mailto:b.alarconatenas@gmail.com"
-      method="POST"
-      enctype="text/plain">
+<form
+  class="form"
+  action="https://formsubmit.co/b.alarconatenas@gmail.com"
+  method="POST"
+>
+
+  <input type="hidden" name="_subject" value="Nuevo contacto desde Asesoría Pública">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://asesoriapublica.cl/#contacto">
 
   <div class="form__row">
     <label>
@@ -575,8 +581,12 @@
 
   <label>
     Mensaje
-    <textarea name="Mensaje" required rows="5"
-      placeholder="Cuéntame tu caso, comuna y plazo…"></textarea>
+    <textarea
+      name="Mensaje"
+      required
+      rows="5"
+      placeholder="Cuéntame tu caso, comuna y plazo…"
+    ></textarea>
   </label>
 
   <button class="btn btn--block" type="submit">
@@ -584,7 +594,8 @@
   </button>
 
   <p class="form__hint">
-    Al enviar, se abrirá tu correo para completar el envío.
+    Tu mensaje será enviado directamente a nuestro correo.
+    Respondemos en un plazo máximo de <strong>24–48 horas hábiles</strong>.
   </p>
 </form>
 
