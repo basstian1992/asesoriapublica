@@ -1,6 +1,3 @@
-/* =========================================================
-   VARIABLES GLOBALES
-   ========================================================= */
 :root{
   --bg:#070b16;
   --bg2:#0b1020;
@@ -23,7 +20,6 @@
 
   --container: 1120px;
 
-  /* Sistema de espacios */
   --s1: 6px;
   --s2: 10px;
   --s3: 14px;
@@ -62,12 +58,19 @@ a:hover{opacity:.95}
 }
 
 /* =========================================================
-   TIPOGRAFÍA GLOBAL
+   TIPOGRAFÍA
    ========================================================= */
-h1,h2,h3{margin:0 0 var(--s3); letter-spacing:-.2px}
-p{margin:0 0 var(--s3); max-width:72ch}
+h1,h2,h3{
+  margin:0 0 var(--s3);
+  letter-spacing:-.2px;
+}
 
-/* Justificado SOLO en desktop */
+p{
+  margin:0 0 var(--s3);
+  max-width:72ch;
+}
+
+/* Justificado solo desktop */
 @media (min-width:769px){
   .richtext,
   .feature p,
@@ -99,10 +102,14 @@ p{margin:0 0 var(--s3); max-width:72ch}
   gap: var(--s4);
 }
 
-.brand{display:flex; align-items:center; gap:12px}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
 .brand__mark{
-  height: 52px;
-  width:auto;
+  height:52px;
   max-width:240px;
   object-fit:contain;
 }
@@ -124,12 +131,15 @@ p{margin:0 0 var(--s3); max-width:72ch}
   box-shadow: 0 12px 26px rgba(77,163,255,.10);
   transition: transform .12s ease, filter .12s ease;
 }
+
 .btn:hover{transform:translateY(-1px)}
+
 .btn--ghost{
   background: rgba(255,255,255,.05);
   color: var(--text);
   box-shadow:none;
 }
+
 .btn--block{width:100%}
 
 /* =========================================================
@@ -162,10 +172,27 @@ p{margin:0 0 var(--s3); max-width:72ch}
   flex-wrap:wrap;
 }
 
+/* Logo lateral hero */
+.hero__logo{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero__logo img{
+  width:220px;
+  max-width:100%;
+  height:auto;
+  opacity:.95;
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,.35));
+}
+
 /* =========================================================
    SECCIONES
    ========================================================= */
-.section{padding: var(--s7) 0}
+.section{
+  padding: var(--s7) 0;
+}
 
 .section--alt{
   background: linear-gradient(180deg, rgba(255,255,255,.02), transparent);
@@ -210,9 +237,10 @@ p{margin:0 0 var(--s3); max-width:72ch}
   display:flex;
   justify-content:center;
 }
+
 .confianza-foto img{
-  max-width:220px;
   width:100%;
+  max-width:220px;
   border-radius:16px;
   box-shadow: var(--shadow);
 }
@@ -246,6 +274,24 @@ p{margin:0 0 var(--s3); max-width:72ch}
   white-space:pre-line;
 }
 
+/* Contenido enriquecido */
+.faq details p{margin-bottom:12px}
+.faq details strong{color:#fff}
+
+.faq details ul,
+.faq details ol{
+  margin:10px 0 14px 20px;
+}
+
+.faq details li{
+  margin-bottom:6px;
+  line-height:1.6;
+}
+
+.faq details .btn{
+  margin-top:10px;
+}
+
 .faq-cta{
   margin-top:14px;
   padding-top:12px;
@@ -262,6 +308,15 @@ p{margin:0 0 var(--s3); max-width:72ch}
   padding: var(--s5);
 }
 
+.form label{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin-bottom:14px;
+  font-size:14px;
+  color:var(--muted);
+}
+
 .form__row{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -274,6 +329,14 @@ input,select,textarea{
   border:1px solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.04);
   color: var(--text);
+}
+
+.form button{margin-top:10px}
+
+.form__hint{
+  margin-top:12px;
+  font-size:13px;
+  color:var(--muted2);
 }
 
 /* =========================================================
@@ -292,7 +355,7 @@ input,select,textarea{
 }
 
 /* =========================================================
-   MOBILE (UNIFICADO)
+   MOBILE
    ========================================================= */
 @media (max-width:768px){
 
@@ -301,8 +364,22 @@ input,select,textarea{
   .container{width:calc(100% - 32px)}
 
   .hero__grid{grid-template-columns:1fr}
-  .hero__title{font-size:30px}
-  .hero__cta{flex-direction:column}
+
+  .hero__title{
+    font-size:28px;
+    line-height:1.2;
+  }
+
+  .hero__lead{font-size:15px}
+
+  .hero__cta{
+    flex-direction:column;
+  }
+
+  .hero__logo img{
+    width:150px;
+    margin-top:20px;
+  }
 
   .cards{grid-template-columns:1fr}
 
@@ -315,6 +392,10 @@ input,select,textarea{
     max-width:none;
   }
 }
+
+/* =========================================================
+   ANIMACIONES (CLASES)
+   ========================================================= */
 [data-animate]{
   opacity:0;
   transform: translateY(16px);
@@ -325,15 +406,3 @@ input,select,textarea{
   opacity:1;
   transform: translateY(0);
 }
-const elements = document.querySelectorAll('[data-animate]');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
-
-elements.forEach(el => observer.observe(el));
