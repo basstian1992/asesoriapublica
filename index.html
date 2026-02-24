@@ -45,11 +45,86 @@
     }
   }
   </script>
+
+  <!-- Schema FAQPage (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cómo realizar correctamente un autodespido en Chile?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"El autodespido (despido indirecto) exige causal correcta, prueba y plazos. Paso a paso: identificar incumplimiento grave, reunir pruebas, redactar carta con hechos/fechas y causal, notificar formalmente y demandar dentro de plazo. Errores comunes: causal mal escogida, falta de evidencia, carta débil o fuera de plazo."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cómo tramitar correctamente una patente municipal?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"La patente municipal requiere revisar uso de suelo/zona, definir giro, acreditar domicilio y gestionar permisos sectoriales (SEREMI, alcoholes, recepción final, etc.). El rechazo suele venir por giro incompatible, local no habilitado o documentación incompleta."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cómo constituir una empresa e iniciar actividades?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Constituir bien implica elegir tipo societario, redactar estatutos, firmar/inscribir, obtener RUT e iniciar actividades en SII con régimen tributario correcto. Errores iniciales generan costos futuros."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Es mejor facturar o dar boleta?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Depende del giro, cliente y régimen tributario. Emitir documento incorrecto puede generar observaciones o multas. Se debe evaluar el caso concreto."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cómo realizar una posesión efectiva?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Implica reunir antecedentes, declarar herederos y bienes, solicitar posesión efectiva y luego hacer gestiones posteriores (Conservador, bancos, vehículos). Omitir bienes/herederos complica el trámite."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cómo realizar una denuncia por Ley Karin?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Requiere relato ordenado, evidencia, testigos y definir canal correcto (interno/DT/judicial). Un enfoque desordenado puede debilitar la investigación y abrir espacio a represalias."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cómo demandar a mi empleador?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Depende del conflicto (despido, tutela, nulidad, cobro). Es clave definir acción, pruebas y estrategia; demandas mal enfocadas terminan en acuerdos desfavorables o rechazos."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Debo firmar el finiquito si no estoy de acuerdo?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Firmar sin revisar puede cerrar el conflicto en malos términos. Según el caso, puedes no firmar, firmar con reservas o exigir correcciones. Conviene calcular lo correcto antes."
+        }
+      }
+    ]
+  }
+  </script>
+
 </head>
 
 <body>
 
-<a href="https://wa.me/56937307016"
+<a href="https://wa.me/56937307016?text=Hola%2C%20quiero%20recibir%20asesor%C3%ADa%20profesional."
    class="whatsapp-float"
    target="_blank"
    rel="noopener"
@@ -62,7 +137,7 @@
       <img class="brand__mark" src="assets/logo.png" alt="Asesoría Pública">
     </div>
 
-    <nav class="nav nav--pill">
+    <nav class="nav nav--pill" aria-label="Navegación principal">
       <a href="#servicios">Servicios</a>
       <a href="#confianza">Confianza</a>
       <a href="#faq">FAQ</a>
@@ -83,10 +158,7 @@
   <div class="container hero__grid">
 
     <div class="hero__copy">
-
-      <h1 class="hero__title">
-        Asesoría pública y privada
-      </h1>
+      <h1 class="hero__title">Asesoría pública y privada</h1>
 
       <h2 class="hero__subtitle">
         Gestiones jurídicas y financieras,<br>
@@ -99,7 +171,8 @@
       </p>
 
       <div class="hero__cta">
-        <a class="btn" href="https://wa.me/56937307016" target="_blank">WhatsApp</a>
+        <a class="btn" href="https://wa.me/56937307016?text=Hola%2C%20quiero%20recibir%20asesor%C3%ADa%20profesional."
+           target="_blank" rel="noopener">WhatsApp</a>
         <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
       </div>
 
@@ -111,11 +184,11 @@
           <li>🏛️ Instituciones Públicas</li>
         </ul>
       </div>
-
     </div>
 
-    <div class="hero__logo">
-      <img src="assets/logo.png" alt="Asesoría Pública">
+    <!-- ✅ LOGO HERO REDUCIDO Y PROPORCIONAL -->
+    <div class="hero__logo" aria-hidden="true">
+      <img src="assets/logo.png" alt="">
     </div>
 
   </div>
@@ -130,11 +203,11 @@
     </div>
 
     <div class="cards">
-      <article class="card"><h3>Constitución de empresas</h3><p>SpA, EIRL, Ltda.</p></article>
-      <article class="card"><h3>Inicio de actividades SII</h3><p>Configuración inicial.</p></article>
-      <article class="card"><h3>Patentes municipales</h3><p>Gestión completa.</p></article>
-      <article class="card"><h3>Asesoría laboral</h3><p>Autodespido, denuncias, finiquitos.</p></article>
-      <article class="card card--wide"><h3>Consultoría pública</h3><p>Gestión, modernización y digitalización.</p></article>
+      <article class="card"><h3>Constitución de empresas</h3><p>SpA, EIRL, Ltda. + inicio operativo.</p></article>
+      <article class="card"><h3>Inicio de actividades SII</h3><p>Configuración inicial y revisión de giro.</p></article>
+      <article class="card"><h3>Patentes municipales</h3><p>Gestión completa + permisos cuando aplican.</p></article>
+      <article class="card"><h3>Asesoría laboral</h3><p>Autodespido, denuncias, finiquitos y estrategia.</p></article>
+      <article class="card card--wide"><h3>Consultoría pública</h3><p>Gestión, modernización, digitalización y control.</p></article>
     </div>
   </div>
 </section>
@@ -151,67 +224,198 @@
       <div class="feature">
         <h3>Comunicación clara y profesional</h3>
         <p>
-          Cada caso se analiza jurídicamente, explicando
-          alternativas reales, riesgos y plazos.
+          Cada caso se analiza con rigor: te explicamos alternativas viables,
+          riesgos, plazos y costos reales antes de iniciar.
+        </p>
+        <p>
+          Trabajamos con respaldo documental y orden, porque en gestiones legales
+          y administrativas un “detalle” puede cambiar el resultado.
         </p>
       </div>
 
       <div class="confianza-foto">
-        <img src="assets/perfil.png" alt="Asesoría Pública">
+        <img src="assets/perfil.png" alt="Foto de perfil Asesoría Pública">
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ (RESPUESTAS COMPLETAS) -->
 <section class="section" id="faq">
   <div class="container">
     <div class="section__head">
       <h2>Preguntas frecuentes</h2>
-      <p>Respuestas claras, sin letra chica.</p>
+      <p>Respuestas claras, paso a paso y con respaldo profesional.</p>
     </div>
 
     <div class="faq">
 
       <details>
         <summary>¿Cómo realizar correctamente un autodespido en Chile?</summary>
-        <p><strong>Clave:</strong> Un autodespido bien hecho permite exigir indemnizaciones completas.</p>
+
+        <p><strong>Clave:</strong> si está bien fundamentado, puedes exigir indemnizaciones completas y recargos.</p>
+
+        <p><strong>Paso a paso (bien hecho):</strong></p>
+        <ol>
+          <li><strong>Definir la causal correcta</strong> (ej. no pago de remuneraciones/cotizaciones, incumplimiento grave, maltrato, cambios unilaterales).</li>
+          <li><strong>Reunir pruebas</strong>: liquidaciones, cartolas AFP/Isapre/Fonasa, correos, WhatsApp, testigos, documentos internos, informes médicos/psicológicos si aplica.</li>
+          <li><strong>Redactar la carta</strong> con hechos, fechas, detalle del incumplimiento y cita de la causal legal.</li>
+          <li><strong>Notificar formalmente</strong> (de forma que quede prueba de envío/recepción).</li>
+          <li><strong>Demandar dentro de plazo</strong> ante el Juzgado del Trabajo para indemnizaciones, recargos y prestaciones adeudadas.</li>
+        </ol>
+
+        <p><strong>Dificultades típicas:</strong></p>
         <ul>
-          <li>Elegir causal correcta</li>
-          <li>Reunir pruebas</li>
-          <li>Respetar plazos</li>
+          <li>Causal mal elegida o carta débil (sin fechas/hechos).</li>
+          <li>Prueba insuficiente o mal ordenada.</li>
+          <li>Plazos perdidos (y se cae el caso).</li>
         </ul>
-        <a class="btn btn--sm" href="https://wa.me/56937307016">¿Es tu caso? Escríbenos</a>
+
+        <p><strong>Por qué conviene asesoría:</strong> un autodespido se gana con la carta + la prueba + la estrategia. Nosotros te ayudamos a estructurar el caso para maximizar resultados (indemnización, recargos, feriado, cotizaciones y otros conceptos cuando corresponda).</p>
+
+        <a class="btn btn--sm" href="https://wa.me/56937307016?text=Hola%2C%20necesito%20asesor%C3%ADa%20por%20autodespido." target="_blank" rel="noopener">
+          ¿Este es tu caso? Escríbenos
+        </a>
       </details>
 
       <details>
-        <summary>¿Cómo tramitar una patente municipal?</summary>
-        <p>Revisión de giro, zonificación y permisos sectoriales.</p>
-        <a class="btn btn--sm" href="https://wa.me/56937307016">Consultar</a>
+        <summary>¿Cómo tramitar correctamente una patente municipal?</summary>
+
+        <p><strong>Clave:</strong> la mayoría de rechazos ocurre por giro, zonificación o permisos faltantes.</p>
+
+        <p><strong>Paso a paso:</strong></p>
+        <ol>
+          <li><strong>Revisar zonificación / uso de suelo</strong> del domicilio (si permite tu actividad).</li>
+          <li><strong>Definir el giro correcto</strong> y alinear SII + municipio (si no coincide, te observan).</li>
+          <li><strong>Acreditar domicilio</strong>: título, arriendo, comodato o autorización del propietario.</li>
+          <li><strong>Gestionar permisos sectoriales</strong> según rubro (SEREMI, alcoholes, recepción final, bomberos, etc.).</li>
+          <li><strong>Ingreso de solicitud</strong> + seguimiento hasta resolución.</li>
+        </ol>
+
+        <p><strong>Por qué conviene asesoría:</strong> revisamos tu caso y ordenamos documentación para evitar observaciones, retrasos y segundas vueltas. Te ahorra semanas.</p>
+
+        <a class="btn btn--sm" href="https://wa.me/56937307016?text=Hola%2C%20quiero%20tramitar%20patente%20municipal." target="_blank" rel="noopener">
+          ¿Este es tu caso? Escríbenos
+        </a>
       </details>
 
       <details>
-        <summary>¿Cómo constituir una empresa?</summary>
-        <p>Estructura legal, estatutos, inicio SII y configuración tributaria.</p>
-        <a class="btn btn--sm" href="https://wa.me/56937307016">Consultar</a>
+        <summary>¿Cómo constituir una empresa e iniciar actividades?</summary>
+
+        <p><strong>Clave:</strong> una empresa mal constituida o con estatutos genéricos suele traer problemas después.</p>
+
+        <p><strong>Paso a paso:</strong></p>
+        <ol>
+          <li><strong>Elegir tipo societario</strong> (SpA, Ltda., EIRL, etc.) según objetivos y riesgos.</li>
+          <li><strong>Redactar estatutos sólidos</strong>: administración, poderes, capital, socios, salida/entrada, reglas claras.</li>
+          <li><strong>Firmar e inscribir</strong> (RES o notaría + registros según corresponda).</li>
+          <li><strong>Obtener RUT e iniciar actividades en SII</strong> con giro y régimen correctos.</li>
+          <li><strong>Checklist de operación</strong>: patente, contratos, cumplimiento tributario, orden documental.</li>
+        </ol>
+
+        <p><strong>Por qué conviene asesoría:</strong> dejamos tu empresa lista para operar, evitando correcciones futuras, observaciones del SII y problemas con socios.</p>
+
+        <a class="btn btn--sm" href="https://wa.me/56937307016?text=Hola%2C%20quiero%20constituir%20una%20empresa." target="_blank" rel="noopener">
+          ¿Este es tu caso? Escríbenos
+        </a>
       </details>
 
       <details>
         <summary>¿Es mejor facturar o dar boleta?</summary>
-        <p>Depende del giro, cliente y régimen tributario.</p>
-        <a class="btn btn--sm" href="https://wa.me/56937307016">Consultar</a>
+
+        <p><strong>Clave:</strong> depende del giro, cliente y régimen tributario. Emitir mal puede generar observaciones o multas.</p>
+
+        <p><strong>Paso a paso:</strong></p>
+        <ol>
+          <li>Definir tu actividad exacta y si afecta IVA.</li>
+          <li>Revisar a quién vendes (personas/empresas) y requisitos de respaldo.</li>
+          <li>Configurar correctamente documentos y giro en SII.</li>
+        </ol>
+
+        <p><strong>Por qué conviene asesoría:</strong> te orientamos para evitar errores tributarios y dejar tu sistema de emisión ordenado.</p>
+
+        <a class="btn btn--sm" href="https://wa.me/56937307016?text=Hola%2C%20necesito%20ayuda%20para%20definir%20factura%20o%20boleta." target="_blank" rel="noopener">
+          ¿Este es tu caso? Escríbenos
+        </a>
       </details>
 
       <details>
         <summary>¿Cómo realizar una posesión efectiva?</summary>
-        <p>Trámite completo y gestiones posteriores.</p>
-        <a class="btn btn--sm" href="https://wa.me/56937307016">Consultar</a>
+
+        <p><strong>Clave:</strong> el trámite no termina cuando “sale aprobada”: hay gestiones posteriores críticas.</p>
+
+        <p><strong>Paso a paso:</strong></p>
+        <ol>
+          <li>Reunir antecedentes del fallecido y herederos.</li>
+          <li>Declarar bienes correctamente (inmuebles, vehículos, cuentas, etc.).</li>
+          <li>Solicitar posesión efectiva (Registro Civil o vía judicial según caso).</li>
+          <li>Realizar gestiones posteriores: Conservador, bancos, vehículos, venta/partición.</li>
+        </ol>
+
+        <p><strong>Por qué conviene asesoría:</strong> evitamos omisiones de bienes/herederos y dejamos todo listo para el uso real de los bienes (venta, inscripción o partición).</p>
+
+        <a class="btn btn--sm" href="https://wa.me/56937307016?text=Hola%2C%20necesito%20posesi%C3%B3n%20efectiva." target="_blank" rel="noopener">
+          ¿Este es tu caso? Escríbenos
+        </a>
       </details>
 
       <details>
-        <summary>¿Cómo denunciar por Ley Karin?</summary>
-        <p>Estructura correcta del relato, pruebas y canal.</p>
-        <a class="btn btn--sm" href="https://wa.me/56937307016">Consultar</a>
+        <summary>¿Cómo realizar una denuncia por Ley Karin?</summary>
+
+        <p><strong>Clave:</strong> un relato desordenado o sin evidencia debilita la denuncia.</p>
+
+        <p><strong>Paso a paso:</strong></p>
+        <ol>
+          <li>Ordenar hechos con fechas, lugares, personas y testigos.</li>
+          <li>Reunir evidencia (correos, mensajes, documentos, reportes).</li>
+          <li>Definir canal correcto (interno/DT/acciones judiciales si aplica).</li>
+          <li>Solicitar medidas de resguardo cuando corresponda.</li>
+        </ol>
+
+        <p><strong>Por qué conviene asesoría:</strong> estructuramos el caso, resguardamos prueba y evitamos errores que terminan en investigaciones fallidas o represalias.</p>
+
+        <a class="btn btn--sm" href="https://wa.me/56937307016?text=Hola%2C%20necesito%20denuncia%20Ley%20Karin." target="_blank" rel="noopener">
+          ¿Este es tu caso? Escríbenos
+        </a>
+      </details>
+
+      <details>
+        <summary>¿Cómo demandar a mi empleador?</summary>
+
+        <p><strong>Clave:</strong> el tipo de demanda y la estrategia determinan el resultado económico.</p>
+
+        <p><strong>Paso a paso:</strong></p>
+        <ol>
+          <li>Diagnóstico del caso y definición de acción (tutela, despido, nulidad, cobro, etc.).</li>
+          <li>Orden de prueba y preparación de testigos.</li>
+          <li>Redacción de demanda completa y presentación.</li>
+          <li>Audiencias (preparatoria / juicio) y negociación si conviene.</li>
+        </ol>
+
+        <p><strong>Por qué conviene asesoría:</strong> evitamos pedir “lo incorrecto” y maximizamos indemnizaciones y prestaciones según corresponda.</p>
+
+        <a class="btn btn--sm" href="https://wa.me/56937307016?text=Hola%2C%20quiero%20demandar%20a%20mi%20empleador." target="_blank" rel="noopener">
+          ¿Este es tu caso? Escríbenos
+        </a>
+      </details>
+
+      <details>
+        <summary>¿Debo firmar el finiquito si no estoy de acuerdo?</summary>
+
+        <p><strong>Clave:</strong> firmar mal puede cerrar el camino a reclamar.</p>
+
+        <p><strong>Paso a paso:</strong></p>
+        <ol>
+          <li>Revisar ítems: feriado, horas extra, cotizaciones, comisiones, descuentos, etc.</li>
+          <li>Comparar con cálculos reales y antecedentes.</li>
+          <li>Definir estrategia: no firmar / firmar con reservas / exigir corrección.</li>
+        </ol>
+
+        <p><strong>Por qué conviene asesoría:</strong> calculamos lo correcto y te indicamos la mejor forma de firmar o reclamar para no perder derechos.</p>
+
+        <a class="btn btn--sm" href="https://wa.me/56937307016?text=Hola%2C%20necesito%20revisar%20mi%20finiquito." target="_blank" rel="noopener">
+          ¿Este es tu caso? Escríbenos
+        </a>
       </details>
 
     </div>
@@ -225,9 +429,11 @@
 
       <div class="ctaBox__copy">
         <h2>Contacto</h2>
-        <p>WhatsApp o formulario.</p>
+        <p>WhatsApp o formulario. Respondemos en 24–48 horas hábiles.</p>
+
         <div class="ctaBox__actions">
-          <a class="btn" href="https://wa.me/56937307016">WhatsApp</a>
+          <a class="btn" href="https://wa.me/56937307016?text=Hola%2C%20quiero%20recibir%20asesor%C3%ADa%20profesional."
+             target="_blank" rel="noopener">WhatsApp</a>
           <a class="btn btn--ghost" href="mailto:contacto@asesoriapublica.cl">Correo</a>
         </div>
       </div>
@@ -235,17 +441,31 @@
       <form class="form"
             action="https://formsubmit.co/b.alarconatenas@gmail.com"
             method="POST">
-
+        <input type="hidden" name="_subject" value="Nuevo contacto desde Asesoría Pública">
+        <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://asesoriapublica.cl/#contacto">
 
         <div class="form__row">
-          <label>Nombre<input name="Nombre" required></label>
-          <label>Teléfono<input name="Telefono" required></label>
+          <label>Nombre
+            <input name="Nombre" required placeholder="Tu nombre">
+          </label>
+
+          <label>WhatsApp / Teléfono
+            <input name="Telefono" required placeholder="+569...">
+          </label>
         </div>
 
-        <label>Mensaje<textarea name="Mensaje" required></textarea></label>
+        <label>Mensaje
+          <textarea name="Mensaje" required rows="5" placeholder="Cuéntame tu caso, comuna y plazo…"></textarea>
+        </label>
 
         <button class="btn btn--block" type="submit">Enviar mensaje</button>
+
+        <p class="form__hint">
+          Tu mensaje será enviado directamente a nuestro correo.
+          Respondemos en un plazo máximo de <strong>24–48 horas hábiles</strong>.
+        </p>
       </form>
 
     </div>
@@ -261,5 +481,35 @@
 </footer>
 
 <script src="script.js"></script>
+
+<!-- ✅ CSS EXTRA SOLO PARA LOGO HERO (NO ROMPE TU styles.css) -->
+<style>
+  /* Ajuste logo hero para no “comerse” los títulos */
+  .hero__logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .hero__logo img{
+    width:min(240px, 60%);
+    height:auto;
+    opacity:.92;
+    filter: drop-shadow(0 18px 28px rgba(0,0,0,.35));
+  }
+  @media (max-width: 980px){
+    .hero__logo img{ width:min(200px, 55%); }
+  }
+  @media (max-width: 720px){
+    .hero__logo{ margin-top: 14px; }
+    .hero__logo img{ width:min(160px, 48%); }
+  }
+
+  /* FAQ: espaciado premium sin tocar tu CSS global */
+  .faq details{ padding:16px 18px; }
+  .faq details p{ margin:10px 0; }
+  .faq details ul, .faq details ol{ margin:10px 0 12px 18px; }
+  .faq .btn--sm{ margin-top: 10px; display:inline-flex; }
+</style>
+
 </body>
 </html>
