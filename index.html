@@ -1,267 +1,213 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>Asesoría Pública | Asesoría jurídica, empresarial y pública</title>
 
   <meta name="description"
-        content="Asesoría jurídica, empresarial y pública en Chile. Autodespido, empresas, patentes municipales, derecho laboral, consultoría pública y trámites administrativos.">
+        content="Asesoría jurídica, empresarial y pública en Chile. Constitución de empresas, trámites, consultoría pública, derecho laboral y digitalización con respaldo profesional." />
 
-  <meta name="theme-color" content="#0b1020">
+  <meta name="theme-color" content="#0b1020" />
 
-  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="icon" href="assets/logo.png" type="image/png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Asesoría Pública" />
+  <meta property="og:description" content="Asesoría jurídica, empresarial y pública en Chile con respaldo profesional." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://asesoriapublica.cl" />
 </head>
 
 <body>
 
 <!-- WhatsApp flotante -->
-<a href="https://wa.me/56937307016"
+<a href="https://wa.me/56937307016?text=Hola%2C%20quiero%20recibir%20asesor%C3%ADa%20profesional."
    class="whatsapp-float"
    target="_blank"
    rel="noopener"
-   aria-label="WhatsApp Asesoría Pública">💬</a>
+   aria-label="WhatsApp Asesoría Pública">
+  💬
+</a>
 
 <a class="skip" href="#contenido">Saltar al contenido</a>
 
+<!-- HEADER -->
 <header class="topbar">
   <div class="container topbar__inner">
     <div class="brand">
-      <img src="assets/logo.png" class="brand__mark" alt="Asesoría Pública">
+      <img src="assets/logo.png"
+           alt="Asesoría Pública"
+           class="brand__mark">
     </div>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Principal">
       <a href="#servicios">Servicios</a>
       <a href="#confianza">Confianza</a>
       <a href="#faq">Preguntas</a>
       <a class="btn btn--sm btn--ghost" href="#contacto">Contacto</a>
     </nav>
+
+    <button class="menuBtn" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
+<!-- MAIN -->
 <main id="contenido">
 
-<!-- ================= FAQ ================= -->
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero__grid">
+
+    <div>
+      <p class="pill">
+        <span class="dot"></span>
+        Seriedad contractual • Gestión moderna • Respaldo profesional
+      </p>
+
+      <h1 class="hero__title">
+        Asesoría jurídica, empresarial y pública en Chile
+      </h1>
+
+      <p class="hero__lead">
+        Acompañamiento técnico y profesional en trámites, empresas,
+        derecho laboral, consultoría pública y digitalización.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn"
+           href="https://wa.me/56937307016?text=Hola%2C%20quiero%20recibir%20asesor%C3%ADa%20profesional."
+           target="_blank">WhatsApp</a>
+
+        <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+      </div>
+
+      <!-- Líneas de trabajo -->
+      <div class="lineasTrabajo">
+        <h3>3 líneas de trabajo</h3>
+        <ul class="lineasTrabajo__list">
+          <li><span class="icon">👤</span><span class="text">Personas</span></li>
+          <li><span class="icon">🏢</span><span class="text">Empresas</span></li>
+          <li><span class="icon">🏛️</span><span class="text">Instituciones públicas</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Visual -->
+    <div class="hero__visual" aria-hidden="true">
+      <div class="glassCard">
+        <div class="glassCard__top">
+          <div class="chip">Asesoría Pública</div>
+          <div class="status">
+            <span class="status__dot"></span>
+            Gestiones técnicas
+          </div>
+        </div>
+
+        <div class="glassCard__list">
+          <div class="row"><span>Constitución de empresas</span><span class="badge">RES / Notaría</span></div>
+          <div class="row"><span>Inicio de actividades</span><span class="badge badge--violet">SII</span></div>
+          <div class="row"><span>Patentes municipales</span><span class="badge badge--green">Municipal</span></div>
+          <div class="row"><span>Consultoría pública</span><span class="badge badge--amber">Proyectos</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section" id="servicios">
+  <div class="container">
+    <div class="section__head">
+      <h2>Servicios</h2>
+      <p>Asesoría profesional en trámites, empresas y gestión pública.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card"><h3>Constitución de empresas</h3><p>SpA, Ltda., EIRL, estatutos y formalización completa.</p></article>
+      <article class="card"><h3>Inicio de actividades SII</h3><p>Configuración tributaria y verificación.</p></article>
+      <article class="card"><h3>Patentes municipales</h3><p>Revisión de requisitos y tramitación.</p></article>
+      <article class="card"><h3>Derecho laboral</h3><p>Autodespido, finiquitos, denuncias y demandas.</p></article>
+      <article class="card"><h3>Consultoría pública</h3><p>Inversión pública, gestión territorial y modernización.</p></article>
+      <article class="card"><h3>Digitalización</h3><p>ERP, automatización y soluciones tecnológicas.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIANZA -->
+<section class="section" id="confianza">
+  <div class="container">
+    <div class="section__head">
+      <h2>Seriedad y confianza</h2>
+      <p>Un enfoque personalizado, con vasta experiencia en el ámbito público y privado.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="feature richtext">
+        <h3>Comunicación asertiva y profesional</h3>
+        <p>Analizamos cada caso conforme al marco legal vigente en Chile.</p>
+        <p>Explicamos riesgos, plazos y alternativas reales.</p>
+        <ul>
+          <li>Derecho laboral y comercial</li>
+          <li>Gestión pública</li>
+          <li>Trámites administrativos</li>
+          <li>Tributación y contabilidad</li>
+        </ul>
+      </div>
+
+      <div class="confianza-foto">
+        <img src="assets/perfil.png" alt="Asesoría Pública">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
 <section class="section section--alt" id="faq">
   <div class="container">
-
     <div class="section__head">
       <h2>Preguntas frecuentes</h2>
-      <p>Información clara, jurídica y práctica para tomar decisiones informadas.</p>
+      <p>Información clara y profesional.</p>
     </div>
 
     <div class="faq">
 
-<!-- 1 AUTO DESPIDO -->
-<details itemscope itemtype="https://schema.org/Question">
-<summary>
-  <span class="q" itemprop="name">¿Cómo realizar correctamente un auto despido en Chile?</span>
-  <span class="chev">⌄</span>
-</summary>
+      <details itemscope itemtype="https://schema.org/Question">
+        <summary><span class="q" itemprop="name">¿Cuánto cuesta?</span><span class="chev">⌄</span></summary>
+        <div class="faq__body richtext" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">El valor depende del servicio y complejidad. Siempre se informa previamente.</p>
+        </div>
+      </details>
 
-<div class="faq__body richtext" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <details itemscope itemtype="https://schema.org/Question">
+        <summary><span class="q" itemprop="name">¿Trabajas con ClaveÚnica?</span><span class="chev">⌄</span></summary>
+        <div class="faq__body richtext" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Sí, siempre con autorización expresa del cliente.</p>
+        </div>
+      </details>
 
-<p><strong>Clave:</strong> Un autodespido bien hecho puede generar indemnizaciones completas y recargos.</p>
+      <details itemscope itemtype="https://schema.org/Question">
+        <summary><span class="q" itemprop="name">¿Cómo realizar un autodespido en Chile?</span><span class="chev">⌄</span></summary>
+        <div class="faq__body richtext" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p><strong>Clave:</strong> Un error puede hacerte perder indemnizaciones.</p>
+          <p itemprop="text">Se debe acreditar incumplimiento grave, reunir pruebas y respetar plazos legales.</p>
+          <div class="faq__cta">
+            <a class="btn" href="https://wa.me/56937307016" target="_blank">Escríbenos por WhatsApp</a>
+          </div>
+        </div>
+      </details>
 
-<p itemprop="text">
-El autodespido (o despido indirecto) ocurre cuando el trabajador pone término al contrato
-por incumplimiento grave del empleador, exigiendo las mismas indemnizaciones que un despido injustificado.
-</p>
-
-<p><strong>Pasos generales:</strong></p>
-<ul>
-  <li>Identificar la causal correcta.</li>
-  <li>Reunir pruebas (liquidaciones, cotizaciones, mensajes, testigos).</li>
-  <li>Redactar carta con hechos y causal legal.</li>
-  <li>Notificar formalmente.</li>
-  <li>Demandar dentro de plazo.</li>
-</ul>
-
-<p><strong>Dificultades típicas:</strong></p>
-<ul>
-  <li>Mala elección de causal.</li>
-  <li>Falta de prueba suficiente.</li>
-  <li>Pérdida de plazos.</li>
-</ul>
-
-<p>
-Un autodespido se gana en la carta, la prueba y la estrategia.
-</p>
-
-<div class="faq-cta">
-  <a class="btn" href="https://wa.me/56937307016" target="_blank">Consultar por WhatsApp</a>
-</div>
-</div>
-</details>
-
-<!-- 2 PATENTE MUNICIPAL -->
-<details itemscope itemtype="https://schema.org/Question">
-<summary>
-  <span class="q" itemprop="name">¿Cómo tramitar correctamente una patente municipal?</span>
-  <span class="chev">⌄</span>
-</summary>
-
-<div class="faq__body richtext" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-
-<p><strong>Clave:</strong> No basta con iniciar actividades, la municipalidad exige requisitos propios.</p>
-
-<p itemprop="text">
-La patente municipal autoriza el ejercicio de una actividad económica en una comuna.
-</p>
-
-<ul>
-  <li>Verificar zonificación.</li>
-  <li>Definir giro compatible.</li>
-  <li>Acreditar domicilio.</li>
-  <li>Obtener permisos sectoriales.</li>
-</ul>
-
-<p><strong>Dificultades típicas:</strong></p>
-<ul>
-  <li>Giro incompatible.</li>
-  <li>Falta de autorización del propietario.</li>
-  <li>Permisos sanitarios pendientes.</li>
-</ul>
-
-<div class="faq-cta">
-  <a class="btn" href="https://wa.me/56937307016" target="_blank">Revisar mi caso</a>
-</div>
-</div>
-</details>
-
-<!-- 3 CONSTITUIR EMPRESA -->
-<details itemscope itemtype="https://schema.org/Question">
-<summary>
-  <span class="q" itemprop="name">¿Cómo constituir una empresa e iniciar actividades?</span>
-  <span class="chev">⌄</span>
-</summary>
-
-<div class="faq__body richtext" itemscope itemprop="acceptedAnswer">
-
-<p><strong>Clave:</strong> Una mala estructura inicial genera costos futuros.</p>
-
-<ul>
-  <li>Elegir tipo societario correcto.</li>
-  <li>Redactar estatutos adecuados.</li>
-  <li>Obtener RUT.</li>
-  <li>Iniciar actividades en SII.</li>
-  <li>Definir régimen tributario.</li>
-</ul>
-
-<p>
-Errores comunes incluyen estatutos genéricos y giros mal configurados.
-</p>
-
-<div class="faq-cta">
-  <a class="btn" href="https://wa.me/56937307016" target="_blank">Asesoría empresa</a>
-</div>
-</div>
-</details>
-
-<!-- 4 FACTURA O BOLETA -->
-<details itemscope itemtype="https://schema.org/Question">
-<summary>
-  <span class="q" itemprop="name">¿Es mejor facturar o dar boleta?</span>
-  <span class="chev">⌄</span>
-</summary>
-
-<div class="faq__body richtext" itemscope itemprop="acceptedAnswer">
-
-<p><strong>Clave:</strong> Depende de la actividad y del cliente.</p>
-
-<ul>
-  <li>Boleta: personas naturales.</li>
-  <li>Factura: empresas (B2B).</li>
-</ul>
-
-<p>
-Emitir mal el documento puede generar sanciones del SII.
-</p>
-</div>
-</details>
-
-<!-- 5 POSESIÓN EFECTIVA -->
-<details itemscope itemtype="https://schema.org/Question">
-<summary>
-  <span class="q" itemprop="name">¿Cómo realizar una posesión efectiva?</span>
-  <span class="chev">⌄</span>
-</summary>
-
-<div class="faq__body richtext" itemscope itemprop="acceptedAnswer">
-
-<p><strong>Clave:</strong> El error más común es dejar el trámite incompleto.</p>
-
-<ul>
-  <li>Identificar herederos.</li>
-  <li>Declarar bienes.</li>
-  <li>Gestionar inscripciones posteriores.</li>
-</ul>
-</div>
-</details>
-
-<!-- 6 LEY KARIN -->
-<details itemscope itemtype="https://schema.org/Question">
-<summary>
-  <span class="q" itemprop="name">¿Cómo realizar una denuncia por Ley Karin?</span>
-  <span class="chev">⌄</span>
-</summary>
-
-<div class="faq__body richtext" itemscope itemprop="acceptedAnswer">
-
-<p><strong>Clave:</strong> La estructura del relato y la prueba es determinante.</p>
-
-<ul>
-  <li>Relato cronológico.</li>
-  <li>Evidencia documental.</li>
-  <li>Evaluar canal correcto.</li>
-</ul>
-</div>
-</details>
-
-<!-- 7 DEMANDA LABORAL -->
-<details itemscope itemtype="https://schema.org/Question">
-<summary>
-  <span class="q" itemprop="name">¿Cómo demandar a mi empleador?</span>
-  <span class="chev">⌄</span>
-</summary>
-
-<div class="faq__body richtext" itemscope itemprop="acceptedAnswer">
-
-<p><strong>Clave:</strong> Una demanda mal enfocada reduce las posibilidades de éxito.</p>
-
-<ul>
-  <li>Definir acción correcta.</li>
-  <li>Reunir prueba.</li>
-  <li>Evaluar conciliación vs juicio.</li>
-</ul>
-</div>
-</details>
-
-<!-- 8 FINIQUITO -->
-<details itemscope itemtype="https://schema.org/Question">
-<summary>
-  <span class="q" itemprop="name">¿Debo firmar el finiquito si no estoy de acuerdo?</span>
-  <span class="chev">⌄</span>
-</summary>
-
-<div class="faq__body richtext" itemscope itemprop="acceptedAnswer">
-
-<p><strong>Clave:</strong> Firmar sin revisar puede hacerte perder derechos.</p>
-
-<ul>
-  <li>No firmar.</li>
-  <li>Firmar con reserva.</li>
-  <li>Exigir correcciones.</li>
-</ul>
-</div>
-</details>
+      <!-- Puedes seguir agregando más FAQ aquí manteniendo esta estructura -->
 
     </div>
   </div>
@@ -275,7 +221,11 @@ Emitir mal el documento puede generar sanciones del SII.
       <div>
         <h2>Contacto</h2>
         <p>WhatsApp o formulario de contacto.</p>
-        <a class="btn" href="https://wa.me/56937307016" target="_blank">WhatsApp</a>
+
+        <div class="ctaBox__actions">
+          <a class="btn" href="https://wa.me/56937307016" target="_blank">WhatsApp</a>
+          <a class="btn btn--ghost" href="mailto:contacto@asesoriapublica.cl">Correo</a>
+        </div>
       </div>
 
       <form class="form"
@@ -314,5 +264,6 @@ Emitir mal el documento puede generar sanciones del SII.
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
