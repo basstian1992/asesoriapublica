@@ -406,3 +406,28 @@ input,select,textarea{
   opacity:1;
   transform: translateY(0);
 }
+/* =========================
+   BOTONES PREMIUM
+   ========================= */
+
+.btn{
+  text-transform: none;
+  letter-spacing:.3px;
+}
+
+.btn--ghost{
+  backdrop-filter: blur(6px);
+  border:1px solid rgba(255,255,255,.18);
+}
+
+.hero__cta .btn{
+  min-width:190px;
+  justify-content:center;
+}
+
+/* Mobile */
+@media (max-width:768px){
+  .hero__cta .btn{
+    width:100%;
+  }
+}
