@@ -505,3 +505,39 @@ input,select,textarea{
     height:220px;
   }
 }
+/* =========================================
+   FIX FOTOS EQUIPO (MOBILE PRO)
+   ========================================= */
+
+/* Desktop mantiene estética */
+.teamCard__photo{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  object-position: center top; /* 👈 prioriza rostro */
+}
+
+/* Tablet */
+@media (max-width: 980px){
+  .teamCard__photo{
+    height:240px;
+  }
+}
+
+/* MOBILE (aquí está el arreglo real) */
+@media (max-width: 768px){
+
+  .teamCard__photo{
+    height:auto;              /* 🔥 clave: evita recorte */
+    max-height:320px;
+    object-fit:contain;       /* 🔥 muestra imagen completa */
+    background:#0b1020;       /* fondo elegante si sobra espacio */
+    padding:6px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+
+  .teamCard{
+    overflow:hidden;
+  }
+
+}
