@@ -572,3 +572,52 @@ input,select,textarea{
 
 </body>
 </html>
+/* =========================================
+   FIX DEFINITIVO FOTOS EQUIPO MOBILE
+   ========================================= */
+
+.teamCard{
+  overflow: hidden;
+}
+
+/* Regla base */
+.teamCard__photo{
+  display:block;
+  width:100%;
+  border-radius:0;
+}
+
+/* SOLO móvil */
+@media (max-width:768px){
+
+  .teamGrid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .teamCard__photo{
+    width:100% !important;
+    height:auto !important;          /* elimina alto fijo */
+    max-height:none !important;     /* elimina límite */
+    min-height:unset !important;
+    object-fit:unset !important;    /* elimina cover */
+    object-position:center center !important;
+    aspect-ratio:auto !important;   /* elimina ratio forzado */
+    padding:0 !important;
+    background:none !important;
+  }
+
+  .teamCard__body{
+    padding:16px;
+  }
+
+  .teamCard__body h3{
+    font-size:18px;
+    margin-bottom:6px;
+  }
+
+  .teamCard__role{
+    font-size:14px;
+    margin-bottom:10px;
+  }
+}
