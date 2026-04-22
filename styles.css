@@ -70,7 +70,6 @@ p{
   max-width:72ch;
 }
 
-/* Justificado solo desktop */
 @media (min-width:769px){
   .richtext,
   .feature p,
@@ -185,6 +184,7 @@ p{
 }
 
 .btn--block{width:100%}
+
 .btn--sm{
   padding:10px 14px;
   font-size:14px;
@@ -660,20 +660,20 @@ textarea::placeholder{
 }
 
 .stepCard{
-  background:#ffffff;
-  border:1px solid #e5e7eb;
+  background:#ffffff !important;
+  border:1px solid #e5e7eb !important;
   border-radius:18px;
   padding:20px;
-  box-shadow:0 10px 24px rgba(0,0,0,.06);
-  color:#111827;
+  box-shadow:0 10px 24px rgba(0,0,0,.06) !important;
+  color:#111827 !important;
 }
 
 .stepCard__n{
   color:#0f172a !important;
-  font-weight:800;
-  font-size:1.3rem;
+  font-weight:800 !important;
+  font-size:1.3rem !important;
   margin-bottom:8px;
-  line-height:1;
+  line-height:1 !important;
 }
 
 .stepCard h3{
@@ -686,7 +686,46 @@ textarea::placeholder{
   margin:0;
   line-height:1.6;
   max-width:none;
-  text-align:left;
+  text-align:left !important;
+}
+
+/* FIX GLOBAL DEFINITIVO PARA CUALQUIER TEXTO INTERNO */
+.stepsGrid .stepCard,
+.stepCard{
+  background:#ffffff !important;
+  border:1px solid #e5e7eb !important;
+  color:#111827 !important;
+  box-shadow:0 10px 24px rgba(0,0,0,.06) !important;
+}
+
+.stepsGrid .stepCard .stepCard__n,
+.stepCard .stepCard__n{
+  color:#0f172a !important;
+}
+
+.stepsGrid .stepCard h3,
+.stepCard h3{
+  color:#111827 !important;
+}
+
+.stepsGrid .stepCard p,
+.stepCard p{
+  color:#374151 !important;
+  text-align:left !important;
+  max-width:none !important;
+}
+
+.stepsGrid .stepCard span,
+.stepsGrid .stepCard div,
+.stepsGrid .stepCard li,
+.stepsGrid .stepCard strong,
+.stepsGrid .stepCard small,
+.stepCard span,
+.stepCard div,
+.stepCard li,
+.stepCard strong,
+.stepCard small{
+  color:#374151 !important;
 }
 
 /* =========================================================
@@ -841,51 +880,4 @@ textarea::placeholder{
   .stepsGrid{
     grid-template-columns:1fr;
   }
-}
-/* =========================================
-   FIX GLOBAL DEFINITIVO - PROCESO DE TRABAJO
-   Corrige todos los bloques de 4 pasos en todas las páginas
-   ========================================= */
-
-.stepsGrid .stepCard,
-.stepCard{
-  background:#ffffff !important;
-  border:1px solid #e5e7eb !important;
-  color:#111827 !important;
-  box-shadow:0 10px 24px rgba(0,0,0,.06) !important;
-}
-
-.stepsGrid .stepCard *,
-.stepCard *{
-  color:inherit;
-}
-
-.stepsGrid .stepCard .stepCard__n,
-.stepCard .stepCard__n{
-  color:#0f172a !important;
-  font-weight:800 !important;
-  font-size:1.3rem !important;
-  line-height:1 !important;
-}
-
-.stepsGrid .stepCard h3,
-.stepCard h3{
-  color:#111827 !important;
-}
-
-.stepsGrid .stepCard p,
-.stepCard p{
-  color:#374151 !important;
-  text-align:left !important;
-  max-width:none !important;
-}
-
-/* por si usaste spans o textos sueltos dentro del paso */
-.stepsGrid .stepCard span,
-.stepsGrid .stepCard div,
-.stepsGrid .stepCard li,
-.stepCard span,
-.stepCard div,
-.stepCard li{
-  color:#374151 !important;
 }
