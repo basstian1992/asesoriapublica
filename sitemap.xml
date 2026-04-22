@@ -5,18 +5,81 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://asesoriapublica.cl/autodespido-chile.html</loc>
+    <loc>https://asesoriapublica.cl/constitucion-de-empresas.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <url>
+    <loc>https://asesoriapublica.cl/inicio-de-actividades-sii.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://asesoriapublica.cl/deberes-sii-emprendedores.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <url>
     <loc>https://asesoriapublica.cl/patente-municipal.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://asesoriapublica.cl/constitucion-de-empresas.html</loc>
+    <loc>https://asesoriapublica.cl/autodespido-chile.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://asesoriapublica.cl/asesoria-laboral.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://asesoriapublica.cl/demanda-estatuto-docente-codigo-trabajo.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://asesoriapublica.cl/regularizacion-titulos-dominio.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://asesoriapublica.cl/desarrollo-web-empresas.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://asesoriapublica.cl/implementacion-pos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://asesoriapublica.cl/implementacion-erp.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://asesoriapublica.cl/como-facturar-en-chile.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://asesoriapublica.cl/denuncia-ley-karin.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
