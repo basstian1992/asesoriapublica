@@ -842,3 +842,50 @@ textarea::placeholder{
     grid-template-columns:1fr;
   }
 }
+/* =========================================
+   FIX GLOBAL DEFINITIVO - PROCESO DE TRABAJO
+   Corrige todos los bloques de 4 pasos en todas las páginas
+   ========================================= */
+
+.stepsGrid .stepCard,
+.stepCard{
+  background:#ffffff !important;
+  border:1px solid #e5e7eb !important;
+  color:#111827 !important;
+  box-shadow:0 10px 24px rgba(0,0,0,.06) !important;
+}
+
+.stepsGrid .stepCard *,
+.stepCard *{
+  color:inherit;
+}
+
+.stepsGrid .stepCard .stepCard__n,
+.stepCard .stepCard__n{
+  color:#0f172a !important;
+  font-weight:800 !important;
+  font-size:1.3rem !important;
+  line-height:1 !important;
+}
+
+.stepsGrid .stepCard h3,
+.stepCard h3{
+  color:#111827 !important;
+}
+
+.stepsGrid .stepCard p,
+.stepCard p{
+  color:#374151 !important;
+  text-align:left !important;
+  max-width:none !important;
+}
+
+/* por si usaste spans o textos sueltos dentro del paso */
+.stepsGrid .stepCard span,
+.stepsGrid .stepCard div,
+.stepsGrid .stepCard li,
+.stepCard span,
+.stepCard div,
+.stepCard li{
+  color:#374151 !important;
+}
