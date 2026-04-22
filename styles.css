@@ -694,3 +694,17 @@ input,select,textarea{
     padding:16px;
   }
 }
+.seo-links{
+  position:absolute;
+  left:-9999px;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.cards .card h3 a{
+  color:inherit;
+  text-decoration:none;
+}
+.cards .card h3 a:hover{
+  text-decoration:underline;
+}
