@@ -100,18 +100,6 @@ p{
   padding: 12px 0;
   gap: var(--s4);
 }
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.brand__mark{
-  height:52px;
-  max-width:240px;
-  object-fit:contain;
-}
 .brand{
   display:flex;
   align-items:center;
@@ -129,26 +117,33 @@ p{
   height:52px;
   max-width:240px;
   object-fit:contain;
+  display:block;
+  flex:none;
 }
 
 .brand__text{
   color:#ffffff;
-  font-size:16px;
-  font-weight:700;
-  line-height:1.15;
-  letter-spacing:.2px;
-  white-space:nowrap;
-}
-@media (max-width: 768px){
-.brand__text{
-  color:rgba(255,255,255,.96);
   font-size:15px;
   font-weight:800;
-  line-height:1.1;
+  line-height:1;
   letter-spacing:.3px;
-  text-shadow:0 1px 10px rgba(0,0,0,.25);
   white-space:nowrap;
+  display:flex;
+  align-items:center;
+  height:52px;
+  position:relative;
+  top:-3px;
+  text-shadow:0 1px 10px rgba(0,0,0,.25);
 }
+@media (max-width: 768px){
+  .brand__text{
+    font-size:13px;
+    max-width:170px;
+    white-space:normal;
+    line-height:1.05;
+    height:auto;
+    top:0;
+  }
 
   .brand__mark{
     height:44px;
