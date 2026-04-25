@@ -124,3 +124,31 @@
     }
   });
 })();
+function toggleThemeAP() {
+  var body = document.body;
+  var isLight = body.classList.toggle("light-mode");
+
+  try {
+    localStorage.setItem("asesoriaPublicaTheme", isLight ? "light" : "dark");
+  } catch (e) {}
+
+  var themeMeta = document.querySelector('meta[name="theme-color"]');
+  if (themeMeta) {
+    themeMeta.setAttribute("content", isLight ? "#f7f4ee" : "#0b1020");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  try {
+    var savedTheme = localStorage.getItem("asesoriaPublicaTheme");
+
+    if (savedTheme === "light") {
+      document.body.classList.add("light-mode");
+
+      var themeMeta = document.querySelector('meta[name="theme-color"]');
+      if (themeMeta) {
+        themeMeta.setAttribute("content", "#f7f4ee");
+      }
+    }
+  } catch (e) {}
+});
