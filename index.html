@@ -208,7 +208,7 @@
       <a href="#contacto" class="nav__cta">Contacto</a>
     </nav>
 
-    <button class="themeToggle" id="themeToggle" type="button" aria-label="Cambiar entre modo oscuro y modo claro">
+    <button class="themeToggle" type="button" onclick="toggleThemeAP()" aria-label="Cambiar entre modo claro y oscuro">
       <span class="themeToggle__sun">☀️</span>
       <span class="themeToggle__moon">🌙</span>
     </button>
@@ -752,7 +752,7 @@
     height:auto;
     opacity:.92;
     object-fit:contain;
-    filter: drop-shadow(0 18px 28px rgba(0,0,0,.35));
+    filter:drop-shadow(0 18px 28px rgba(0,0,0,.35));
   }
 
   .brand__mark{
@@ -760,19 +760,38 @@
   }
 
   @media (max-width: 980px){
-    .hero__logo img{ width:min(200px, 55%); }
+    .hero__logo img{
+      width:min(200px, 55%);
+    }
   }
 
   @media (max-width: 720px){
-    .hero__logo{ margin-top: 14px; }
-    .hero__logo img{ width:min(160px, 48%); }
+    .hero__logo{
+      margin-top:14px;
+    }
+
+    .hero__logo img{
+      width:min(160px, 48%);
+    }
   }
 
-  .faq details{ padding:16px 18px; }
-  .faq details p{ margin:10px 0; }
-  .faq details ul, 
-  .faq details ol{ margin:10px 0 12px 18px; }
-  .faq .btn--sm{ margin-top:10px; display:inline-flex; }
+  .faq details{
+    padding:16px 18px;
+  }
+
+  .faq details p{
+    margin:10px 0;
+  }
+
+  .faq details ul,
+  .faq details ol{
+    margin:10px 0 12px 18px;
+  }
+
+  .faq .btn--sm{
+    margin-top:10px;
+    display:inline-flex;
+  }
 
   .services-links{
     display:grid;
@@ -812,132 +831,134 @@
     text-decoration:underline;
   }
 
-  /* ================================
+  /* =====================================================
      BOTÓN PREMIUM MODO CLARO / OSCURO
-  ================================ */
+  ===================================================== */
 
   .themeToggle{
-    position:relative;
-    width:48px;
-    height:48px;
-    flex:0 0 auto;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,.18);
-    background:
-      linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.04));
-    color:#fff;
-    cursor:pointer;
-    overflow:hidden;
+    position:relative !important;
+    width:46px !important;
+    height:46px !important;
+    min-width:46px !important;
+    flex:0 0 auto !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    border-radius:999px !important;
+    border:1px solid rgba(255,255,255,.22) !important;
+    background:linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06)) !important;
+    color:#fff !important;
+    cursor:pointer !important;
+    overflow:hidden !important;
     box-shadow:
-      0 14px 30px rgba(0,0,0,.22),
-      inset 0 1px 0 rgba(255,255,255,.16);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+      0 14px 34px rgba(0,0,0,.24),
+      inset 0 1px 0 rgba(255,255,255,.18) !important;
+    backdrop-filter:blur(16px) !important;
+    -webkit-backdrop-filter:blur(16px) !important;
+    transition:all .25s ease !important;
+    z-index:50 !important;
   }
 
   .themeToggle:hover{
-    transform:translateY(-2px);
-    border-color:rgba(255,255,255,.34);
+    transform:translateY(-2px) !important;
+    border-color:rgba(255,255,255,.38) !important;
     box-shadow:
-      0 20px 42px rgba(0,0,0,.30),
-      inset 0 1px 0 rgba(255,255,255,.22);
+      0 20px 44px rgba(0,0,0,.32),
+      inset 0 1px 0 rgba(255,255,255,.22) !important;
   }
 
   .themeToggle:active{
-    transform:translateY(0) scale(.96);
+    transform:translateY(0) scale(.96) !important;
   }
 
   .themeToggle__sun,
   .themeToggle__moon{
-    position:absolute;
-    font-size:19px;
-    line-height:1;
-    transition:opacity .25s ease, transform .25s ease;
+    position:absolute !important;
+    font-size:18px !important;
+    line-height:1 !important;
+    transition:opacity .25s ease, transform .25s ease !important;
   }
 
   .themeToggle__sun{
-    opacity:1;
-    transform:translateY(0) rotate(0deg) scale(1);
+    opacity:1 !important;
+    transform:translateY(0) rotate(0deg) scale(1) !important;
   }
 
   .themeToggle__moon{
-    opacity:0;
-    transform:translateY(16px) rotate(-25deg) scale(.7);
+    opacity:0 !important;
+    transform:translateY(14px) rotate(-20deg) scale(.75) !important;
   }
 
   body.light-mode .themeToggle{
-    background:#111827;
-    border-color:rgba(17,24,39,.15);
-    color:#fff;
+    background:#111827 !important;
+    border-color:rgba(17,24,39,.18) !important;
+    color:#fff !important;
   }
 
   body.light-mode .themeToggle__sun{
-    opacity:0;
-    transform:translateY(-16px) rotate(25deg) scale(.7);
+    opacity:0 !important;
+    transform:translateY(-14px) rotate(20deg) scale(.75) !important;
   }
 
   body.light-mode .themeToggle__moon{
-    opacity:1;
-    transform:translateY(0) rotate(0deg) scale(1);
+    opacity:1 !important;
+    transform:translateY(0) rotate(0deg) scale(1) !important;
   }
 
   @media (max-width: 780px){
     .themeToggle{
-      width:42px;
-      height:42px;
+      width:42px !important;
+      height:42px !important;
+      min-width:42px !important;
     }
 
     .themeToggle__sun,
     .themeToggle__moon{
-      font-size:17px;
+      font-size:17px !important;
     }
   }
 
-  /* ================================
+  /* =====================================================
      VERSIÓN CLARA PREMIUM
-  ================================ */
+  ===================================================== */
 
   body.light-mode{
-    background:#f7f4ee;
-    color:#151515;
+    background:#f7f4ee !important;
+    color:#151515 !important;
   }
 
   body.light-mode .topbar{
-    background:rgba(255,255,255,.86);
-    border-bottom:1px solid rgba(20,20,20,.08);
-    box-shadow:0 12px 34px rgba(0,0,0,.08);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
+    background:rgba(255,255,255,.90) !important;
+    border-bottom:1px solid rgba(20,20,20,.08) !important;
+    box-shadow:0 12px 34px rgba(0,0,0,.08) !important;
+    backdrop-filter:blur(18px) !important;
+    -webkit-backdrop-filter:blur(18px) !important;
   }
 
   body.light-mode .brand__text,
   body.light-mode .nav a{
-    color:#151515;
+    color:#151515 !important;
   }
 
   body.light-mode .nav--pill{
-    background:rgba(255,255,255,.72);
-    border:1px solid rgba(20,20,20,.08);
+    background:rgba(255,255,255,.75) !important;
+    border:1px solid rgba(20,20,20,.08) !important;
   }
 
   body.light-mode .nav__cta{
-    background:#111827;
+    background:#111827 !important;
     color:#ffffff !important;
   }
 
   body.light-mode .menuBtn span{
-    background:#111827;
+    background:#111827 !important;
   }
 
   body.light-mode .hero{
     background:
       radial-gradient(circle at top left, rgba(190,145,62,.22), transparent 34%),
-      linear-gradient(135deg, #fffaf0 0%, #f5efe4 48%, #ebe4d8 100%);
-    color:#141414;
+      linear-gradient(135deg, #fffaf0 0%, #f5efe4 48%, #ebe4d8 100%) !important;
+    color:#141414 !important;
   }
 
   body.light-mode .hero__title,
@@ -946,7 +967,7 @@
   body.light-mode .feature h3,
   body.light-mode .teamCard h3,
   body.light-mode .ctaBox h2{
-    color:#111827;
+    color:#111827 !important;
   }
 
   body.light-mode .hero__subtitle,
@@ -958,15 +979,15 @@
   body.light-mode .faq__body,
   body.light-mode .seo-content p,
   body.light-mode .form__hint{
-    color:#374151;
+    color:#374151 !important;
   }
 
   body.light-mode .section{
-    background:#f7f4ee;
+    background:#f7f4ee !important;
   }
 
   body.light-mode .section--alt{
-    background:#eee7db;
+    background:#eee7db !important;
   }
 
   body.light-mode .card,
@@ -976,75 +997,77 @@
   body.light-mode .faq details,
   body.light-mode .form,
   body.light-mode .socialCard{
-    background:rgba(255,255,255,.88);
-    color:#151515;
-    border:1px solid rgba(20,20,20,.08);
-    box-shadow:0 18px 44px rgba(0,0,0,.08);
+    background:rgba(255,255,255,.90) !important;
+    color:#151515 !important;
+    border:1px solid rgba(20,20,20,.08) !important;
+    box-shadow:0 18px 44px rgba(0,0,0,.08) !important;
   }
 
   body.light-mode .btn{
-    background:#111827;
-    color:#ffffff;
-    border-color:#111827;
+    background:#111827 !important;
+    color:#ffffff !important;
+    border-color:#111827 !important;
   }
 
   body.light-mode .btn--ghost{
-    background:transparent;
-    color:#111827;
-    border:1px solid rgba(17,24,39,.28);
+    background:transparent !important;
+    color:#111827 !important;
+    border:1px solid rgba(17,24,39,.28) !important;
   }
 
   body.light-mode input,
   body.light-mode textarea{
-    background:#ffffff;
-    color:#111827;
-    border:1px solid rgba(17,24,39,.18);
+    background:#ffffff !important;
+    color:#111827 !important;
+    border:1px solid rgba(17,24,39,.18) !important;
   }
 
   body.light-mode input::placeholder,
   body.light-mode textarea::placeholder{
-    color:#6b7280;
+    color:#6b7280 !important;
   }
 
   body.light-mode .footer{
-    background:#111827;
-    color:#ffffff;
+    background:#111827 !important;
+    color:#ffffff !important;
   }
 
   body.light-mode .whatsapp-float{
-    box-shadow:0 18px 40px rgba(0,0,0,.22);
+    box-shadow:0 18px 40px rgba(0,0,0,.22) !important;
   }
 </style>
 
 <script src="script.js"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const body = document.body;
-    const toggle = document.getElementById("themeToggle");
+  function toggleThemeAP() {
+    var body = document.body;
+    var isLight = body.classList.toggle("light-mode");
 
-    if (!toggle) return;
-
-    const savedTheme = localStorage.getItem("asesoriaPublicaTheme");
-
-    if (savedTheme === "light") {
-      body.classList.add("light-mode");
-    }
-
-    toggle.addEventListener("click", function () {
-      body.classList.toggle("light-mode");
-
-      const isLight = body.classList.contains("light-mode");
-
+    try {
       localStorage.setItem("asesoriaPublicaTheme", isLight ? "light" : "dark");
+    } catch (e) {}
 
-      const themeMeta = document.querySelector('meta[name="theme-color"]');
+    var themeMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeMeta) {
+      themeMeta.setAttribute("content", isLight ? "#f7f4ee" : "#0b1020");
+    }
+  }
 
-      if (themeMeta) {
-        themeMeta.setAttribute("content", isLight ? "#f7f4ee" : "#0b1020");
+  (function () {
+    try {
+      var savedTheme = localStorage.getItem("asesoriaPublicaTheme");
+
+      if (savedTheme === "light") {
+        document.body.classList.add("light-mode");
+
+        var themeMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeMeta) {
+          themeMeta.setAttribute("content", "#f7f4ee");
+        }
       }
-    });
-  });
+    } catch (e) {}
+  })();
 </script>
 
 </body>
