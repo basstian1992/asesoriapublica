@@ -1841,3 +1841,39 @@ body.light-mode .hero__cta .btn--ghost *,
 body.light-mode a.btn.btn--ghost * {
   color: inherit !important;
 }
+/* =====================================================
+   CORRECCIÓN DEFINITIVA BOTÓN "VER SERVICIOS" EN MODO CLARO
+===================================================== */
+
+body.light-mode .hero__cta .btn-ver-servicios,
+body.light-mode a.btn-ver-servicios,
+body.light-mode .btn-ver-servicios {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid rgba(17, 24, 39, .35) !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, .10) !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+body.light-mode .hero__cta .btn-ver-servicios:link,
+body.light-mode .hero__cta .btn-ver-servicios:visited,
+body.light-mode a.btn-ver-servicios:link,
+body.light-mode a.btn-ver-servicios:visited {
+  color: #111827 !important;
+}
+
+body.light-mode .hero__cta .btn-ver-servicios:hover,
+body.light-mode a.btn-ver-servicios:hover,
+body.light-mode .btn-ver-servicios:hover {
+  background: #111827 !important;
+  color: #ffffff !important;
+  border-color: #111827 !important;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, .16) !important;
+}
+
+body.light-mode .hero__cta .btn-ver-servicios *,
+body.light-mode a.btn-ver-servicios *,
+body.light-mode .btn-ver-servicios * {
+  color: inherit !important;
+}
