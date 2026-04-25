@@ -177,38 +177,7 @@
   }
   </script>
 </head>
-<script src="script.js"></script>
 
-<script>
-  function toggleThemeAP() {
-    var body = document.body;
-    var isLight = body.classList.toggle("light-mode");
-
-    try {
-      localStorage.setItem("asesoriaPublicaTheme", isLight ? "light" : "dark");
-    } catch (e) {}
-
-    var themeMeta = document.querySelector('meta[name="theme-color"]');
-    if (themeMeta) {
-      themeMeta.setAttribute("content", isLight ? "#f7f4ee" : "#0b1020");
-    }
-  }
-
-  (function () {
-    try {
-      var savedTheme = localStorage.getItem("asesoriaPublicaTheme");
-
-      if (savedTheme === "light") {
-        document.body.classList.add("light-mode");
-
-        var themeMeta = document.querySelector('meta[name="theme-color"]');
-        if (themeMeta) {
-          themeMeta.setAttribute("content", "#f7f4ee");
-        }
-      }
-    } catch (e) {}
-  })();
-</script>
 <body>
 
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -1066,6 +1035,68 @@
   body.light-mode .whatsapp-float{
     box-shadow:0 18px 40px rgba(0,0,0,.22) !important;
   }
+
+  /* =====================================================
+     CORRECCIÓN GLOBAL DE TEXTOS EN MODO CLARO
+  ===================================================== */
+
+  body.light-mode,
+  body.light-mode main,
+  body.light-mode section,
+  body.light-mode article,
+  body.light-mode div,
+  body.light-mode p,
+  body.light-mode span,
+  body.light-mode li,
+  body.light-mode label,
+  body.light-mode summary,
+  body.light-mode details,
+  body.light-mode small,
+  body.light-mode strong,
+  body.light-mode em {
+    color:#1f2937 !important;
+  }
+
+  body.light-mode h1,
+  body.light-mode h2,
+  body.light-mode h3,
+  body.light-mode h4,
+  body.light-mode h5,
+  body.light-mode h6 {
+    color:#111827 !important;
+  }
+
+  body.light-mode .hero__subtitle,
+  body.light-mode .hero__lead,
+  body.light-mode .section__head p,
+  body.light-mode .card p,
+  body.light-mode .feature p,
+  body.light-mode .teamCard p,
+  body.light-mode .faq__body,
+  body.light-mode .seo-content p,
+  body.light-mode .form__hint,
+  body.light-mode .teamCard__role,
+  body.light-mode .socialCard p,
+  body.light-mode .socialCard span {
+    color:#374151 !important;
+    opacity:1 !important;
+  }
+
+  body.light-mode a {
+    color:#111827 !important;
+  }
+
+  body.light-mode .btn,
+  body.light-mode .btn *,
+  body.light-mode .nav__cta,
+  body.light-mode .nav__cta *,
+  body.light-mode .footer,
+  body.light-mode .footer *,
+  body.light-mode .whatsapp-float,
+  body.light-mode .themeToggle,
+  body.light-mode .themeToggle * {
+    color:#ffffff !important;
+  }
 </style>
 
 <script src="script.js"></script>
@@ -1085,7 +1116,7 @@
     }
   }
 
-  (function () {
+  document.addEventListener("DOMContentLoaded", function () {
     try {
       var savedTheme = localStorage.getItem("asesoriaPublicaTheme");
 
@@ -1098,7 +1129,7 @@
         }
       }
     } catch (e) {}
-  })();
+  });
 </script>
 
 </body>
