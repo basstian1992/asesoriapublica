@@ -1877,3 +1877,37 @@ body.light-mode a.btn-ver-servicios *,
 body.light-mode .btn-ver-servicios * {
   color: inherit !important;
 }
+/* =====================================================
+   CORRECCIÓN BOTÓN "CONTACTO" EN MODO CLARO
+===================================================== */
+
+body.light-mode .nav .nav__cta,
+body.light-mode .nav__cta,
+body.light-mode a.nav__cta {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid rgba(17, 24, 39, .28) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .08) !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+body.light-mode .nav .nav__cta:link,
+body.light-mode .nav .nav__cta:visited,
+body.light-mode a.nav__cta:link,
+body.light-mode a.nav__cta:visited {
+  color: #111827 !important;
+}
+
+body.light-mode .nav .nav__cta:hover,
+body.light-mode a.nav__cta:hover {
+  background: #111827 !important;
+  color: #ffffff !important;
+  border-color: #111827 !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, .14) !important;
+}
+
+body.light-mode .nav .nav__cta *,
+body.light-mode a.nav__cta * {
+  color: inherit !important;
+}
