@@ -22,22 +22,29 @@
   --green:#42d392;
   --amber:#ffcc66;
 
-  --container: 1120px;
+  --container:1120px;
 
-  --s1: 6px;
-  --s2: 10px;
-  --s3: 14px;
-  --s4: 18px;
-  --s5: 24px;
-  --s6: 32px;
-  --s7: 44px;
+  --s1:6px;
+  --s2:10px;
+  --s3:14px;
+  --s4:18px;
+  --s5:24px;
+  --s6:32px;
+  --s7:44px;
 }
 
 /* =========================================================
    BASE
-   ========================================================= */
-*{box-sizing:border-box}
-html,body{height:100%}
+========================================================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  height:100%;
+}
 
 html{
   scroll-behavior:smooth;
@@ -45,16 +52,16 @@ html{
 
 body{
   margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background:
     radial-gradient(1200px 600px at 10% -10%, rgba(77,163,255,.25), transparent 60%),
     radial-gradient(900px 500px at 90% 10%, rgba(177,119,255,.18), transparent 55%),
     radial-gradient(900px 600px at 60% 110%, rgba(66,211,146,.12), transparent 55%),
     linear-gradient(180deg, var(--bg) 0%, var(--bg2) 60%, #050814 100%);
-  color: var(--text);
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  color:var(--text);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
 
 img{
@@ -68,7 +75,9 @@ a{
   transition:opacity .15s ease, color .15s ease, transform .15s ease;
 }
 
-a:hover{opacity:.96}
+a:hover{
+  opacity:.96;
+}
 
 .container{
   width:min(var(--container), calc(100% - 40px));
@@ -77,8 +86,11 @@ a:hover{opacity:.96}
 
 /* =========================================================
    TIPOGRAFÍA
-   ========================================================= */
-h1,h2,h3{
+========================================================= */
+
+h1,
+h2,
+h3{
   margin:0 0 var(--s3);
   letter-spacing:-.25px;
 }
@@ -97,21 +109,23 @@ p{
   .feature p,
   .faq__body,
   .card p{
-    text-align: justify;
-    hyphens: auto;
-    line-height: 1.75;
+    text-align:justify;
+    hyphens:auto;
+    line-height:1.75;
   }
 }
 
 /* =========================================================
    HEADER
-   ========================================================= */
+========================================================= */
+
 .topbar{
   position:sticky;
   top:0;
   z-index:50;
-  backdrop-filter: blur(16px);
-  background: rgba(7,11,22,.72);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  background:rgba(7,11,22,.72);
   border-bottom:1px solid rgba(255,255,255,.07);
 }
 
@@ -119,13 +133,14 @@ p{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding: 10px 0;
-  gap: var(--s4);
+  padding:10px 0;
+  gap:var(--s4);
 }
 
 /* =========================================================
    BRAND
-   ========================================================= */
+========================================================= */
+
 .brand{
   display:flex;
   align-items:center;
@@ -166,7 +181,8 @@ p{
 
 /* =========================================================
    NAVEGACIÓN
-   ========================================================= */
+========================================================= */
+
 .nav{
   display:flex;
   align-items:center;
@@ -192,7 +208,7 @@ p{
   border:1px solid rgba(255,255,255,.18);
   color:#fff;
   font-weight:800;
-  box-shadow: 0 10px 22px rgba(77,163,255,.10);
+  box-shadow:0 10px 22px rgba(77,163,255,.10);
 }
 
 .menuBtn{
@@ -214,7 +230,8 @@ p{
 
 /* =========================================================
    BOTONES
-   ========================================================= */
+========================================================= */
+
 .btn{
   display:inline-flex;
   align-items:center;
@@ -222,30 +239,33 @@ p{
   gap:10px;
   padding:14px 18px;
   border-radius:14px;
-  background: linear-gradient(135deg, rgba(77,163,255,.95), rgba(177,119,255,.95));
+  background:linear-gradient(135deg, rgba(77,163,255,.95), rgba(177,119,255,.95));
   color:#0a0e1c;
   font-weight:800;
   border:1px solid rgba(255,255,255,.12);
-  box-shadow: 0 12px 26px rgba(77,163,255,.10);
-  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+  box-shadow:0 12px 26px rgba(77,163,255,.10);
+  transition:transform .12s ease, filter .12s ease, box-shadow .12s ease;
   text-transform:none;
   letter-spacing:.3px;
 }
 
 .btn:hover{
   transform:translateY(-1px);
-  box-shadow: 0 16px 30px rgba(77,163,255,.14);
+  box-shadow:0 16px 30px rgba(77,163,255,.14);
 }
 
 .btn--ghost{
-  background: rgba(255,255,255,.05);
-  color: var(--text);
+  background:rgba(255,255,255,.05);
+  color:var(--text);
   box-shadow:none;
-  backdrop-filter: blur(6px);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
   border:1px solid rgba(255,255,255,.18);
 }
 
-.btn--block{width:100%}
+.btn--block{
+  width:100%;
+}
 
 .btn--sm{
   padding:10px 14px;
@@ -254,15 +274,16 @@ p{
 
 /* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
+
 .hero{
-  padding: 56px 0 42px;
+  padding:56px 0 42px;
 }
 
 .hero__grid{
   display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 40px;
+  grid-template-columns:1.15fr .85fr;
+  gap:40px;
   align-items:center;
 }
 
@@ -314,16 +335,21 @@ p{
   max-width:100%;
   height:auto;
   opacity:.96;
-  filter: drop-shadow(0 22px 36px rgba(0,0,0,.32));
+  object-fit:contain;
+  filter:drop-shadow(0 22px 36px rgba(0,0,0,.32));
 }
+
+/* =========================================================
+   LÍNEAS DE TRABAJO
+========================================================= */
 
 .lineasTrabajo{
   margin-top:10px;
   padding:18px 20px;
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
   border:1px solid rgba(255,255,255,.10);
   border-radius:18px;
-  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+  box-shadow:0 14px 30px rgba(0,0,0,.18);
   max-width:460px;
 }
 
@@ -338,7 +364,7 @@ p{
 }
 
 .lineasTrabajo__list{
-  list-:none;
+  list-style:none;
   padding:0;
   margin:0;
   display:grid;
@@ -352,19 +378,20 @@ p{
 
 /* =========================================================
    SECCIONES
-   ========================================================= */
+========================================================= */
+
 .section{
-  padding: 52px 0;
+  padding:52px 0;
 }
 
 .section--alt{
-  background: linear-gradient(180deg, rgba(255,255,255,.02), transparent);
+  background:linear-gradient(180deg, rgba(255,255,255,.02), transparent);
   border-top:1px solid rgba(255,255,255,.06);
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 
 .section__head{
-  margin-bottom: var(--s5);
+  margin-bottom:var(--s5);
 }
 
 .section__head h2{
@@ -379,28 +406,29 @@ p{
 
 /* =========================================================
    CARDS / FEATURES
-   ========================================================= */
+========================================================= */
+
 .cards{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(3, 1fr);
   gap:20px;
 }
 
 .card,
 .feature{
-  background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.03));
+  background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.03));
   border:1px solid rgba(255,255,255,.10);
   border-radius:20px;
   padding:26px;
-  box-shadow: var(--shadow-soft);
-  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  box-shadow:var(--shadow-soft);
+  transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
 
 .card:hover,
 .feature:hover{
-  transform: translateY(-4px);
-  border-color: rgba(255,255,255,.18);
-  box-shadow: var(--shadow-premium);
+  transform:translateY(-4px);
+  border-color:rgba(255,255,255,.18);
+  box-shadow:var(--shadow-premium);
 }
 
 .card h3,
@@ -416,18 +444,19 @@ p{
 }
 
 .card--wide{
-  grid-column: span 2;
+  grid-column:span 2;
 }
 
 .grid2{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(2, 1fr);
   gap:var(--s4);
 }
 
 /* =========================================================
    FOTO CONFIANZA
-   ========================================================= */
+========================================================= */
+
 .confianza-foto{
   display:flex;
   justify-content:center;
@@ -437,12 +466,13 @@ p{
   width:100%;
   max-width:220px;
   border-radius:16px;
-  box-shadow: var(--shadow);
+  box-shadow:var(--shadow);
 }
 
 /* =========================================================
    FAQ
-   ========================================================= */
+========================================================= */
+
 .faq{
   display:grid;
   gap:18px;
@@ -450,16 +480,16 @@ p{
 
 .faq__intro{
   max-width:80ch;
-  margin-bottom: var(--s5);
+  margin-bottom:var(--s5);
   font-size:15px;
   color:var(--muted);
 }
 
 .faq details{
-  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+  background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
   border:1px solid rgba(255,255,255,.10);
   border-radius:18px;
-  box-shadow: 0 10px 22px rgba(0,0,0,.14);
+  box-shadow:0 10px 22px rgba(0,0,0,.14);
   padding:18px 20px;
 }
 
@@ -479,8 +509,13 @@ p{
   white-space:pre-line;
 }
 
-.faq details p{margin-bottom:12px}
-.faq details strong{color:#fff}
+.faq details p{
+  margin-bottom:12px;
+}
+
+.faq details strong{
+  color:#fff;
+}
 
 .faq details ul,
 .faq details ol{
@@ -504,7 +539,8 @@ p{
 
 /* =========================================================
    FORMULARIO / CTA
-   ========================================================= */
+========================================================= */
+
 .ctaBox{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -514,10 +550,10 @@ p{
 
 .ctaBox__copy,
 .form{
-  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+  background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
   border:1px solid rgba(255,255,255,.10);
   border-radius:22px;
-  box-shadow: var(--shadow-soft);
+  box-shadow:var(--shadow-soft);
   padding:28px;
 }
 
@@ -553,12 +589,14 @@ p{
   gap:12px;
 }
 
-input,select,textarea{
+input,
+select,
+textarea{
   padding:14px;
   border-radius:14px;
   border:1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.05);
-  color: var(--text);
+  background:rgba(255,255,255,.05);
+  color:var(--text);
   font:inherit;
 }
 
@@ -575,11 +613,13 @@ input:focus,
 textarea:focus,
 select:focus{
   outline:none;
-  border-color: rgba(77,163,255,.65);
-  box-shadow: 0 0 0 3px rgba(77,163,255,.10);
+  border-color:rgba(77,163,255,.65);
+  box-shadow:0 0 0 3px rgba(77,163,255,.10);
 }
 
-.form button{margin-top:10px}
+.form button{
+  margin-top:10px;
+}
 
 .form__hint{
   margin-top:12px;
@@ -589,26 +629,27 @@ select:focus{
 
 /* =========================================================
    EQUIPO
-   ========================================================= */
+========================================================= */
+
 .teamGrid{
   display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--s4);
+  grid-template-columns:repeat(4, 1fr);
+  gap:var(--s4);
 }
 
 .teamCard{
-  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+  background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
   border:1px solid rgba(255,255,255,.10);
   border-radius:20px;
   overflow:hidden;
-  box-shadow: var(--shadow-premium);
-  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+  box-shadow:var(--shadow-premium);
+  transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
 }
 
 .teamCard:hover{
-  transform: translateY(-3px);
-  border-color: rgba(255,255,255,.18);
-  box-shadow: 0 20px 40px rgba(0,0,0,.24);
+  transform:translateY(-3px);
+  border-color:rgba(255,255,255,.18);
+  box-shadow:0 20px 40px rgba(0,0,0,.24);
 }
 
 .teamCard__photo{
@@ -649,10 +690,11 @@ select:focus{
 
 /* =========================================================
    REDES SOCIALES
-   ========================================================= */
+========================================================= */
+
 .socialGrid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(2, 1fr);
   gap:18px;
 }
 
@@ -711,7 +753,8 @@ select:focus{
 
 /* =========================================================
    UTILIDADES SEO / ACCESIBILIDAD
-   ========================================================= */
+========================================================= */
+
 .seo-links{
   position:absolute;
   left:-9999px;
@@ -773,10 +816,11 @@ select:focus{
 
 /* =========================================================
    STEP CARDS / PROCESO DE TRABAJO
-   ========================================================= */
+========================================================= */
+
 .stepsGrid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(4, 1fr);
   gap:18px;
 }
 
@@ -810,32 +854,6 @@ select:focus{
   text-align:left !important;
 }
 
-/* FIX GLOBAL DEFINITIVO PARA CUALQUIER TEXTO INTERNO */
-.stepsGrid .stepCard,
-.stepCard{
-  background:#ffffff !important;
-  border:1px solid #e5e7eb !important;
-  color:#111827 !important;
-  box-shadow:0 10px 24px rgba(0,0,0,.06) !important;
-}
-
-.stepsGrid .stepCard .stepCard__n,
-.stepCard .stepCard__n{
-  color:#0f172a !important;
-}
-
-.stepsGrid .stepCard h3,
-.stepCard h3{
-  color:#111827 !important;
-}
-
-.stepsGrid .stepCard p,
-.stepCard p{
-  color:#374151 !important;
-  text-align:left !important;
-  max-width:none !important;
-}
-
 .stepsGrid .stepCard span,
 .stepsGrid .stepCard div,
 .stepsGrid .stepCard li,
@@ -851,7 +869,8 @@ select:focus{
 
 /* =========================================================
    WHATSAPP FLOAT
-   ========================================================= */
+========================================================= */
+
 .whatsapp-float{
   position:fixed;
   right:18px;
@@ -892,24 +911,349 @@ select:focus{
 
 /* =========================================================
    ANIMACIONES
-   ========================================================= */
+========================================================= */
+
 [data-animate]{
   opacity:0;
-  transform: translateY(16px);
-  transition: opacity .6s ease, transform .6s ease;
+  transform:translateY(16px);
+  transition:opacity .6s ease, transform .6s ease;
 }
 
 [data-animate].is-visible{
   opacity:1;
-  transform: translateY(0);
+  transform:translateY(0);
+}
+
+/* =========================================================
+   BOTÓN PREMIUM MODO CLARO / OSCURO
+========================================================= */
+
+.themeToggle{
+  position:relative !important;
+  width:46px !important;
+  height:46px !important;
+  min-width:46px !important;
+  flex:0 0 auto !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border-radius:999px !important;
+  border:1px solid rgba(255,255,255,.22) !important;
+  background:linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06)) !important;
+  color:#fff !important;
+  cursor:pointer !important;
+  overflow:hidden !important;
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.24),
+    inset 0 1px 0 rgba(255,255,255,.18) !important;
+  backdrop-filter:blur(16px) !important;
+  -webkit-backdrop-filter:blur(16px) !important;
+  transition:all .25s ease !important;
+  z-index:50 !important;
+}
+
+.themeToggle:hover{
+  transform:translateY(-2px) !important;
+  border-color:rgba(255,255,255,.38) !important;
+  box-shadow:
+    0 20px 44px rgba(0,0,0,.32),
+    inset 0 1px 0 rgba(255,255,255,.22) !important;
+}
+
+.themeToggle:active{
+  transform:translateY(0) scale(.96) !important;
+}
+
+.themeToggle__sun,
+.themeToggle__moon{
+  position:absolute !important;
+  font-size:18px !important;
+  line-height:1 !important;
+  transition:opacity .25s ease, transform .25s ease !important;
+}
+
+.themeToggle__sun{
+  opacity:1 !important;
+  transform:translateY(0) rotate(0deg) scale(1) !important;
+}
+
+.themeToggle__moon{
+  opacity:0 !important;
+  transform:translateY(14px) rotate(-20deg) scale(.75) !important;
+}
+
+body.light-mode .themeToggle{
+  background:#111827 !important;
+  border-color:rgba(17,24,39,.18) !important;
+  color:#fff !important;
+}
+
+body.light-mode .themeToggle__sun{
+  opacity:0 !important;
+  transform:translateY(-14px) rotate(20deg) scale(.75) !important;
+}
+
+body.light-mode .themeToggle__moon{
+  opacity:1 !important;
+  transform:translateY(0) rotate(0deg) scale(1) !important;
+}
+
+/* =========================================================
+   MODO CLARO GLOBAL
+========================================================= */
+
+body.light-mode{
+  background:#f7f4ee !important;
+  color:#151515 !important;
+}
+
+body.light-mode .topbar{
+  background:rgba(255,255,255,.90) !important;
+  border-bottom:1px solid rgba(20,20,20,.08) !important;
+  box-shadow:0 12px 34px rgba(0,0,0,.08) !important;
+  backdrop-filter:blur(18px) !important;
+  -webkit-backdrop-filter:blur(18px) !important;
+}
+
+body.light-mode .brand__text,
+body.light-mode .nav a{
+  color:#151515 !important;
+}
+
+body.light-mode .nav--pill{
+  background:rgba(255,255,255,.75) !important;
+  border:1px solid rgba(20,20,20,.08) !important;
+}
+
+body.light-mode .menuBtn span{
+  background:#111827 !important;
+}
+
+body.light-mode .hero{
+  background:
+    radial-gradient(circle at top left, rgba(190,145,62,.22), transparent 34%),
+    linear-gradient(135deg, #fffaf0 0%, #f5efe4 48%, #ebe4d8 100%) !important;
+  color:#141414 !important;
+}
+
+body.light-mode .section{
+  background:#f7f4ee !important;
+}
+
+body.light-mode .section--alt{
+  background:#eee7db !important;
+}
+
+body.light-mode .card,
+body.light-mode .feature,
+body.light-mode .teamCard,
+body.light-mode .ctaBox,
+body.light-mode .faq details,
+body.light-mode .form,
+body.light-mode .socialCard,
+body.light-mode .service-card,
+body.light-mode .content-card,
+body.light-mode .info-card{
+  background:rgba(255,255,255,.92) !important;
+  color:#1f2937 !important;
+  border:1px solid rgba(17,24,39,.10) !important;
+  box-shadow:0 18px 44px rgba(0,0,0,.08) !important;
+}
+
+body.light-mode,
+body.light-mode main,
+body.light-mode section,
+body.light-mode article,
+body.light-mode div,
+body.light-mode p,
+body.light-mode span,
+body.light-mode li,
+body.light-mode label,
+body.light-mode summary,
+body.light-mode details,
+body.light-mode small,
+body.light-mode strong,
+body.light-mode em{
+  color:#1f2937 !important;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode .hero__title,
+body.light-mode .section__head h2,
+body.light-mode .card h3,
+body.light-mode .card h3 a,
+body.light-mode .feature h3,
+body.light-mode .teamCard h3,
+body.light-mode .socialCard h3,
+body.light-mode .ctaBox h2,
+body.light-mode .faq summary,
+body.light-mode .faq .q{
+  color:#111827 !important;
+}
+
+body.light-mode .hero__subtitle,
+body.light-mode .hero__lead,
+body.light-mode .section__head p,
+body.light-mode .card p,
+body.light-mode .feature p,
+body.light-mode .teamCard p,
+body.light-mode .faq__body,
+body.light-mode .seo-content p,
+body.light-mode .form__hint,
+body.light-mode .teamCard__role,
+body.light-mode .socialCard p,
+body.light-mode .socialCard span,
+body.light-mode [class*="subtitle"],
+body.light-mode [class*="lead"],
+body.light-mode [class*="hint"],
+body.light-mode [class*="role"],
+body.light-mode [class*="description"]{
+  color:#374151 !important;
+  opacity:1 !important;
+}
+
+body.light-mode a{
+  color:#111827 !important;
+}
+
+body.light-mode a:hover{
+  color:#000000 !important;
+}
+
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode select{
+  background:#ffffff !important;
+  color:#111827 !important;
+  border:1px solid rgba(17,24,39,.18) !important;
+}
+
+body.light-mode input::placeholder,
+body.light-mode textarea::placeholder{
+  color:#6b7280 !important;
+}
+
+/* =========================================================
+   BOTONES EN MODO CLARO
+========================================================= */
+
+body.light-mode .btn{
+  background:#111827 !important;
+  color:#ffffff !important;
+  border-color:#111827 !important;
+}
+
+body.light-mode .btn *{
+  color:inherit !important;
+}
+
+body.light-mode .btn--ghost{
+  background:transparent !important;
+  color:#111827 !important;
+  border:1px solid rgba(17,24,39,.28) !important;
+}
+
+body.light-mode .btn--ghost *{
+  color:inherit !important;
+}
+
+/* Botón Ver servicios */
+body.light-mode .hero__cta a.btn-ver-servicios,
+body.light-mode a.btn-ver-servicios,
+body.light-mode .btn-ver-servicios{
+  background:#ffffff !important;
+  background-color:#ffffff !important;
+  color:#111827 !important;
+  border:1px solid rgba(17,24,39,.35) !important;
+  box-shadow:0 14px 32px rgba(0,0,0,.10) !important;
+  text-shadow:none !important;
+  opacity:1 !important;
+}
+
+body.light-mode .hero__cta a.btn-ver-servicios:link,
+body.light-mode .hero__cta a.btn-ver-servicios:visited,
+body.light-mode a.btn-ver-servicios:link,
+body.light-mode a.btn-ver-servicios:visited{
+  color:#111827 !important;
+}
+
+body.light-mode .hero__cta a.btn-ver-servicios:hover,
+body.light-mode a.btn-ver-servicios:hover,
+body.light-mode .btn-ver-servicios:hover{
+  background:#111827 !important;
+  background-color:#111827 !important;
+  color:#ffffff !important;
+  border-color:#111827 !important;
+  box-shadow:0 18px 38px rgba(0,0,0,.16) !important;
+}
+
+body.light-mode .btn-ver-servicios *{
+  color:inherit !important;
+}
+
+/* Botón Contacto del menú */
+body.light-mode .nav a.nav-contacto-claro,
+body.light-mode .nav--pill a.nav-contacto-claro,
+body.light-mode a.nav-contacto-claro{
+  background:#ffffff !important;
+  background-color:#ffffff !important;
+  color:#111827 !important;
+  border:1px solid rgba(17,24,39,.32) !important;
+  box-shadow:0 10px 24px rgba(0,0,0,.08) !important;
+  text-shadow:none !important;
+  opacity:1 !important;
+}
+
+body.light-mode .nav a.nav-contacto-claro:link,
+body.light-mode .nav a.nav-contacto-claro:visited,
+body.light-mode a.nav-contacto-claro:link,
+body.light-mode a.nav-contacto-claro:visited{
+  color:#111827 !important;
+}
+
+body.light-mode .nav a.nav-contacto-claro:hover,
+body.light-mode .nav--pill a.nav-contacto-claro:hover,
+body.light-mode a.nav-contacto-claro:hover{
+  background:#111827 !important;
+  background-color:#111827 !important;
+  color:#ffffff !important;
+  border-color:#111827 !important;
+}
+
+body.light-mode .nav-contacto-claro *{
+  color:inherit !important;
+}
+
+/* Footer y elementos que deben mantenerse claros sobre fondo oscuro */
+body.light-mode .footer,
+body.light-mode .footer *{
+  background:#111827 !important;
+  color:#ffffff !important;
+}
+
+body.light-mode .whatsapp-float,
+body.light-mode .whatsapp-float *,
+body.light-mode .themeToggle,
+body.light-mode .themeToggle *{
+  color:#ffffff !important;
+}
+
+body.light-mode .whatsapp-float{
+  box-shadow:0 18px 40px rgba(0,0,0,.22) !important;
 }
 
 /* =========================================================
    RESPONSIVE
-   ========================================================= */
-@media (max-width: 980px){
+========================================================= */
+
+@media (max-width:980px){
   .teamGrid{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:repeat(2, 1fr);
   }
 
   .teamCard__photo{
@@ -925,9 +1269,9 @@ select:focus{
   }
 }
 
-@media (max-width: 920px){
+@media (max-width:920px){
   .stepsGrid{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2, 1fr);
   }
 
   .hero__grid{
@@ -939,11 +1283,27 @@ select:focus{
   }
 }
 
+@media (max-width:780px){
+  .themeToggle{
+    width:42px !important;
+    height:42px !important;
+    min-width:42px !important;
+  }
+
+  .themeToggle__sun,
+  .themeToggle__moon{
+    font-size:17px !important;
+  }
+}
+
 @media (max-width:768px){
+  body{
+    font-size:16px;
+  }
 
-  body{font-size:16px}
-
-  .container{width:calc(100% - 32px)}
+  .container{
+    width:calc(100% - 32px);
+  }
 
   .topbar__inner{
     gap:12px;
@@ -958,7 +1318,7 @@ select:focus{
   }
 
   .hero{
-    padding: 40px 0 28px;
+    padding:40px 0 28px;
   }
 
   .hero__grid{
@@ -1001,7 +1361,9 @@ select:focus{
     max-width:none;
   }
 
-  .cards{grid-template-columns:1fr}
+  .cards{
+    grid-template-columns:1fr;
+  }
 
   .card--wide{
     grid-column:auto;
@@ -1094,820 +1456,8 @@ select:focus{
   }
 }
 
-@media (max-width: 640px){
+@media (max-width:640px){
   .stepsGrid{
     grid-template-columns:1fr;
   }
-}
-/* =====================================================
-   CORRECCIÓN GLOBAL DE TEXTOS EN MODO CLARO
-   Para evitar letras blancas o invisibles
-===================================================== */
-
-body.light-mode,
-body.light-mode main,
-body.light-mode section,
-body.light-mode article,
-body.light-mode div,
-body.light-mode p,
-body.light-mode span,
-body.light-mode li,
-body.light-mode label,
-body.light-mode summary,
-body.light-mode details,
-body.light-mode small,
-body.light-mode strong,
-body.light-mode em {
-  color: #1f2937 !important;
-}
-
-/* Títulos principales */
-body.light-mode h1,
-body.light-mode h2,
-body.light-mode h3,
-body.light-mode h4,
-body.light-mode h5,
-body.light-mode h6 {
-  color: #111827 !important;
-}
-
-/* Textos secundarios */
-body.light-mode .hero__subtitle,
-body.light-mode .hero__lead,
-body.light-mode .section__head p,
-body.light-mode .card p,
-body.light-mode .feature p,
-body.light-mode .teamCard p,
-body.light-mode .faq__body,
-body.light-mode .seo-content p,
-body.light-mode .form__hint,
-body.light-mode .teamCard__role,
-body.light-mode .socialCard p,
-body.light-mode .socialCard span {
-  color: #374151 !important;
-}
-
-/* Links generales */
-body.light-mode a {
-  color: #111827 !important;
-}
-
-body.light-mode a:hover {
-  color: #000000 !important;
-}
-
-/* Navbar */
-body.light-mode .brand__text,
-body.light-mode .nav a {
-  color: #111827 !important;
-}
-
-/* Botón Contacto del menú */
-body.light-mode .nav__cta {
-  background: #111827 !important;
-  color: #ffffff !important;
-}
-
-/* Botones principales */
-body.light-mode .btn {
-  background: #111827 !important;
-  color: #ffffff !important;
-  border-color: #111827 !important;
-}
-
-/* Botones secundarios */
-body.light-mode .btn--ghost {
-  background: transparent !important;
-  color: #111827 !important;
-  border: 1px solid rgba(17, 24, 39, .28) !important;
-}
-
-/* Evita que los textos dentro de botones se vuelvan oscuros */
-body.light-mode .btn *,
-body.light-mode .nav__cta *,
-body.light-mode button * {
-  color: inherit !important;
-}
-
-/* Tarjetas y cajas */
-body.light-mode .card,
-body.light-mode .feature,
-body.light-mode .teamCard,
-body.light-mode .ctaBox,
-body.light-mode .faq details,
-body.light-mode .form,
-body.light-mode .socialCard {
-  background: rgba(255,255,255,.92) !important;
-  color: #1f2937 !important;
-  border: 1px solid rgba(17,24,39,.10) !important;
-  box-shadow: 0 18px 44px rgba(0,0,0,.08) !important;
-}
-
-/* Títulos dentro de tarjetas */
-body.light-mode .card h3,
-body.light-mode .card h3 a,
-body.light-mode .feature h3,
-body.light-mode .teamCard h3,
-body.light-mode .socialCard h3,
-body.light-mode .ctaBox h2,
-body.light-mode .faq summary,
-body.light-mode .faq .q {
-  color: #111827 !important;
-}
-
-/* Formularios */
-body.light-mode input,
-body.light-mode textarea,
-body.light-mode select {
-  background: #ffffff !important;
-  color: #111827 !important;
-  border: 1px solid rgba(17,24,39,.18) !important;
-}
-
-body.light-mode input::placeholder,
-body.light-mode textarea::placeholder {
-  color: #6b7280 !important;
-}
-
-/* Footer: se mantiene oscuro con letras blancas */
-body.light-mode .footer,
-body.light-mode .footer * {
-  background: #111827 !important;
-  color: #ffffff !important;
-}
-
-/* WhatsApp flotante: se mantiene visible */
-body.light-mode .whatsapp-float {
-  color: #ffffff !important;
-}
-
-/* Íconos del botón de modo claro/oscuro */
-body.light-mode .themeToggle,
-body.light-mode .themeToggle *,
-body.light-mode .themeToggle__sun,
-body.light-mode .themeToggle__moon {
-  color: #ffffff !important;
-}
-
-/* Corrección para textos que tengan opacidad baja */
-body.light-mode [class*="subtitle"],
-body.light-mode [class*="lead"],
-body.light-mode [class*="hint"],
-body.light-mode [class*="role"],
-body.light-mode [class*="description"] {
-  color: #374151 !important;
-  opacity: 1 !important;
-}
-
-/* Corrección para páginas internas de servicios */
-body.light-mode .service,
-body.light-mode .service *,
-body.light-mode .page,
-body.light-mode .page *,
-body.light-mode .content,
-body.light-mode .content *,
-body.light-mode .richtext,
-body.light-mode .richtext * {
-  color: #1f2937 !important;
-}
-
-body.light-mode .service h1,
-body.light-mode .service h2,
-body.light-mode .service h3,
-body.light-mode .page h1,
-body.light-mode .page h2,
-body.light-mode .page h3,
-body.light-mode .content h1,
-body.light-mode .content h2,
-body.light-mode .content h3,
-body.light-mode .richtext h1,
-body.light-mode .richtext h2,
-body.light-mode .richtext h3 {
-  color: #111827 !important;
-}
-
-/* Mantiene blancos solo los elementos que realmente deben ser blancos */
-body.light-mode .btn,
-body.light-mode .btn *,
-body.light-mode .nav__cta,
-body.light-mode .nav__cta *,
-body.light-mode .footer,
-body.light-mode .footer *,
-body.light-mode .whatsapp-float,
-body.light-mode .themeToggle,
-body.light-mode .themeToggle * {
-  color: #ffffff !important;
-}
-/* =====================================================
-   BOTÓN PREMIUM MODO CLARO / OSCURO
-===================================================== */
-
-.themeToggle{
-  position:relative !important;
-  width:46px !important;
-  height:46px !important;
-  min-width:46px !important;
-  flex:0 0 auto !important;
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  border-radius:999px !important;
-  border:1px solid rgba(255,255,255,.22) !important;
-  background:linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06)) !important;
-  color:#fff !important;
-  cursor:pointer !important;
-  overflow:hidden !important;
-  box-shadow:
-    0 14px 34px rgba(0,0,0,.24),
-    inset 0 1px 0 rgba(255,255,255,.18) !important;
-  backdrop-filter:blur(16px) !important;
-  -webkit-backdrop-filter:blur(16px) !important;
-  transition:all .25s ease !important;
-  z-index:50 !important;
-}
-
-.themeToggle:hover{
-  transform:translateY(-2px) !important;
-  border-color:rgba(255,255,255,.38) !important;
-  box-shadow:
-    0 20px 44px rgba(0,0,0,.32),
-    inset 0 1px 0 rgba(255,255,255,.22) !important;
-}
-
-.themeToggle:active{
-  transform:translateY(0) scale(.96) !important;
-}
-
-.themeToggle__sun,
-.themeToggle__moon{
-  position:absolute !important;
-  font-size:18px !important;
-  line-height:1 !important;
-  transition:opacity .25s ease, transform .25s ease !important;
-}
-
-.themeToggle__sun{
-  opacity:1 !important;
-  transform:translateY(0) rotate(0deg) scale(1) !important;
-}
-
-.themeToggle__moon{
-  opacity:0 !important;
-  transform:translateY(14px) rotate(-20deg) scale(.75) !important;
-}
-
-body.light-mode .themeToggle{
-  background:#111827 !important;
-  border-color:rgba(17,24,39,.18) !important;
-  color:#fff !important;
-}
-
-body.light-mode .themeToggle__sun{
-  opacity:0 !important;
-  transform:translateY(-14px) rotate(20deg) scale(.75) !important;
-}
-
-body.light-mode .themeToggle__moon{
-  opacity:1 !important;
-  transform:translateY(0) rotate(0deg) scale(1) !important;
-}
-
-@media (max-width: 780px){
-  .themeToggle{
-    width:42px !important;
-    height:42px !important;
-    min-width:42px !important;
-  }
-
-  .themeToggle__sun,
-  .themeToggle__moon{
-    font-size:17px !important;
-  }
-}
-
-/* =====================================================
-   VERSIÓN CLARA PREMIUM GLOBAL
-===================================================== */
-
-body.light-mode{
-  background:#f7f4ee !important;
-  color:#151515 !important;
-}
-
-body.light-mode .topbar{
-  background:rgba(255,255,255,.90) !important;
-  border-bottom:1px solid rgba(20,20,20,.08) !important;
-  box-shadow:0 12px 34px rgba(0,0,0,.08) !important;
-  backdrop-filter:blur(18px) !important;
-  -webkit-backdrop-filter:blur(18px) !important;
-}
-
-body.light-mode .brand__text,
-body.light-mode .nav a{
-  color:#151515 !important;
-}
-
-body.light-mode .nav--pill{
-  background:rgba(255,255,255,.75) !important;
-  border:1px solid rgba(20,20,20,.08) !important;
-}
-
-body.light-mode .nav__cta{
-  background:#111827 !important;
-  color:#ffffff !important;
-}
-
-body.light-mode .menuBtn span{
-  background:#111827 !important;
-}
-
-body.light-mode .hero{
-  background:
-    radial-gradient(circle at top left, rgba(190,145,62,.22), transparent 34%),
-    linear-gradient(135deg, #fffaf0 0%, #f5efe4 48%, #ebe4d8 100%) !important;
-  color:#141414 !important;
-}
-
-body.light-mode .hero__title,
-body.light-mode .section__head h2,
-body.light-mode .card h3,
-body.light-mode .feature h3,
-body.light-mode .teamCard h3,
-body.light-mode .ctaBox h2{
-  color:#111827 !important;
-}
-
-body.light-mode .hero__subtitle,
-body.light-mode .hero__lead,
-body.light-mode .section__head p,
-body.light-mode .card p,
-body.light-mode .feature p,
-body.light-mode .teamCard p,
-body.light-mode .faq__body,
-body.light-mode .seo-content p,
-body.light-mode .form__hint,
-body.light-mode .teamCard__role,
-body.light-mode .socialCard p,
-body.light-mode .socialCard span{
-  color:#374151 !important;
-  opacity:1 !important;
-}
-
-body.light-mode .section{
-  background:#f7f4ee !important;
-}
-
-body.light-mode .section--alt{
-  background:#eee7db !important;
-}
-
-body.light-mode .card,
-body.light-mode .feature,
-body.light-mode .teamCard,
-body.light-mode .ctaBox,
-body.light-mode .faq details,
-body.light-mode .form,
-body.light-mode .socialCard,
-body.light-mode .service-card,
-body.light-mode .content-card,
-body.light-mode .info-card{
-  background:rgba(255,255,255,.90) !important;
-  color:#151515 !important;
-  border:1px solid rgba(20,20,20,.08) !important;
-  box-shadow:0 18px 44px rgba(0,0,0,.08) !important;
-}
-
-body.light-mode input,
-body.light-mode textarea,
-body.light-mode select{
-  background:#ffffff !important;
-  color:#111827 !important;
-  border:1px solid rgba(17,24,39,.18) !important;
-}
-
-body.light-mode input::placeholder,
-body.light-mode textarea::placeholder{
-  color:#6b7280 !important;
-}
-
-/* Corrección global de letras invisibles */
-body.light-mode,
-body.light-mode main,
-body.light-mode section,
-body.light-mode article,
-body.light-mode div,
-body.light-mode p,
-body.light-mode span,
-body.light-mode li,
-body.light-mode label,
-body.light-mode summary,
-body.light-mode details,
-body.light-mode small,
-body.light-mode strong,
-body.light-mode em{
-  color:#1f2937 !important;
-}
-
-body.light-mode h1,
-body.light-mode h2,
-body.light-mode h3,
-body.light-mode h4,
-body.light-mode h5,
-body.light-mode h6{
-  color:#111827 !important;
-}
-
-body.light-mode a{
-  color:#111827 !important;
-}
-
-body.light-mode .btn,
-body.light-mode .btn *,
-body.light-mode .nav__cta,
-body.light-mode .nav__cta *,
-body.light-mode .footer,
-body.light-mode .footer *,
-body.light-mode .whatsapp-float,
-body.light-mode .themeToggle,
-body.light-mode .themeToggle *{
-  color:#ffffff !important;
-}
-
-body.light-mode .btn{
-  background:#111827 !important;
-  border-color:#111827 !important;
-}
-
-body.light-mode .btn--ghost{
-  background:transparent !important;
-  color:#111827 !important;
-  border:1px solid rgba(17,24,39,.28) !important;
-}
-
-body.light-mode .btn--ghost *{
-  color:#111827 !important;
-}
-
-body.light-mode .footer{
-  background:#111827 !important;
-  color:#ffffff !important;
-}
-
-body.light-mode .whatsapp-float{
-  box-shadow:0 18px 40px rgba(0,0,0,.22) !important;
-}
-/* =====================================================
-   BOTÓN PREMIUM MODO CLARO / OSCURO
-===================================================== */
-
-.themeToggle{
-  position:relative !important;
-  width:46px !important;
-  height:46px !important;
-  min-width:46px !important;
-  flex:0 0 auto !important;
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  border-radius:999px !important;
-  border:1px solid rgba(255,255,255,.22) !important;
-  background:linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06)) !important;
-  color:#fff !important;
-  cursor:pointer !important;
-  overflow:hidden !important;
-  box-shadow:
-    0 14px 34px rgba(0,0,0,.24),
-    inset 0 1px 0 rgba(255,255,255,.18) !important;
-  backdrop-filter:blur(16px) !important;
-  -webkit-backdrop-filter:blur(16px) !important;
-  transition:all .25s ease !important;
-  z-index:50 !important;
-}
-
-.themeToggle:hover{
-  transform:translateY(-2px) !important;
-  border-color:rgba(255,255,255,.38) !important;
-  box-shadow:
-    0 20px 44px rgba(0,0,0,.32),
-    inset 0 1px 0 rgba(255,255,255,.22) !important;
-}
-
-.themeToggle:active{
-  transform:translateY(0) scale(.96) !important;
-}
-
-.themeToggle__sun,
-.themeToggle__moon{
-  position:absolute !important;
-  font-size:18px !important;
-  line-height:1 !important;
-  transition:opacity .25s ease, transform .25s ease !important;
-}
-
-.themeToggle__sun{
-  opacity:1 !important;
-  transform:translateY(0) rotate(0deg) scale(1) !important;
-}
-
-.themeToggle__moon{
-  opacity:0 !important;
-  transform:translateY(14px) rotate(-20deg) scale(.75) !important;
-}
-
-body.light-mode .themeToggle{
-  background:#111827 !important;
-  border-color:rgba(17,24,39,.18) !important;
-  color:#fff !important;
-}
-
-body.light-mode .themeToggle__sun{
-  opacity:0 !important;
-  transform:translateY(-14px) rotate(20deg) scale(.75) !important;
-}
-
-body.light-mode .themeToggle__moon{
-  opacity:1 !important;
-  transform:translateY(0) rotate(0deg) scale(1) !important;
-}
-
-@media (max-width: 780px){
-  .themeToggle{
-    width:42px !important;
-    height:42px !important;
-    min-width:42px !important;
-  }
-
-  .themeToggle__sun,
-  .themeToggle__moon{
-    font-size:17px !important;
-  }
-}
-
-/* =====================================================
-   VERSIÓN CLARA PREMIUM GLOBAL
-===================================================== */
-
-body.light-mode{
-  background:#f7f4ee !important;
-  color:#151515 !important;
-}
-
-body.light-mode .topbar{
-  background:rgba(255,255,255,.90) !important;
-  border-bottom:1px solid rgba(20,20,20,.08) !important;
-  box-shadow:0 12px 34px rgba(0,0,0,.08) !important;
-  backdrop-filter:blur(18px) !important;
-  -webkit-backdrop-filter:blur(18px) !important;
-}
-
-body.light-mode .brand__text,
-body.light-mode .nav a{
-  color:#151515 !important;
-}
-
-body.light-mode .nav--pill{
-  background:rgba(255,255,255,.75) !important;
-  border:1px solid rgba(20,20,20,.08) !important;
-}
-
-body.light-mode .nav__cta{
-  background:#111827 !important;
-  color:#ffffff !important;
-}
-
-body.light-mode .menuBtn span{
-  background:#111827 !important;
-}
-
-body.light-mode .hero{
-  background:
-    radial-gradient(circle at top left, rgba(190,145,62,.22), transparent 34%),
-    linear-gradient(135deg, #fffaf0 0%, #f5efe4 48%, #ebe4d8 100%) !important;
-  color:#141414 !important;
-}
-
-body.light-mode .hero__title,
-body.light-mode .section__head h2,
-body.light-mode .card h3,
-body.light-mode .feature h3,
-body.light-mode .teamCard h3,
-body.light-mode .ctaBox h2{
-  color:#111827 !important;
-}
-
-body.light-mode .hero__subtitle,
-body.light-mode .hero__lead,
-body.light-mode .section__head p,
-body.light-mode .card p,
-body.light-mode .feature p,
-body.light-mode .teamCard p,
-body.light-mode .faq__body,
-body.light-mode .seo-content p,
-body.light-mode .form__hint,
-body.light-mode .teamCard__role,
-body.light-mode .socialCard p,
-body.light-mode .socialCard span{
-  color:#374151 !important;
-  opacity:1 !important;
-}
-
-body.light-mode .section{
-  background:#f7f4ee !important;
-}
-
-body.light-mode .section--alt{
-  background:#eee7db !important;
-}
-
-body.light-mode .card,
-body.light-mode .feature,
-body.light-mode .teamCard,
-body.light-mode .ctaBox,
-body.light-mode .faq details,
-body.light-mode .form,
-body.light-mode .socialCard,
-body.light-mode .service-card,
-body.light-mode .content-card,
-body.light-mode .info-card{
-  background:rgba(255,255,255,.90) !important;
-  color:#151515 !important;
-  border:1px solid rgba(20,20,20,.08) !important;
-  box-shadow:0 18px 44px rgba(0,0,0,.08) !important;
-}
-
-body.light-mode input,
-body.light-mode textarea,
-body.light-mode select{
-  background:#ffffff !important;
-  color:#111827 !important;
-  border:1px solid rgba(17,24,39,.18) !important;
-}
-
-body.light-mode input::placeholder,
-body.light-mode textarea::placeholder{
-  color:#6b7280 !important;
-}
-
-/* Corrección global de letras invisibles */
-body.light-mode,
-body.light-mode main,
-body.light-mode section,
-body.light-mode article,
-body.light-mode div,
-body.light-mode p,
-body.light-mode span,
-body.light-mode li,
-body.light-mode label,
-body.light-mode summary,
-body.light-mode details,
-body.light-mode small,
-body.light-mode strong,
-body.light-mode em{
-  color:#1f2937 !important;
-}
-
-body.light-mode h1,
-body.light-mode h2,
-body.light-mode h3,
-body.light-mode h4,
-body.light-mode h5,
-body.light-mode h6{
-  color:#111827 !important;
-}
-
-body.light-mode a{
-  color:#111827 !important;
-}
-
-body.light-mode .btn,
-body.light-mode .btn *,
-body.light-mode .nav__cta,
-body.light-mode .nav__cta *,
-body.light-mode .footer,
-body.light-mode .footer *,
-body.light-mode .whatsapp-float,
-body.light-mode .themeToggle,
-body.light-mode .themeToggle *{
-  color:#ffffff !important;
-}
-
-body.light-mode .btn{
-  background:#111827 !important;
-  border-color:#111827 !important;
-}
-
-body.light-mode .btn--ghost{
-  background:transparent !important;
-  color:#111827 !important;
-  border:1px solid rgba(17,24,39,.28) !important;
-}
-
-body.light-mode .btn--ghost *{
-  color:#111827 !important;
-}
-
-body.light-mode .footer{
-  background:#111827 !important;
-  color:#ffffff !important;
-}
-
-body.light-mode .whatsapp-float{
-  box-shadow:0 18px 40px rgba(0,0,0,.22) !important;
-}
-/* =====================================================
-   CORRECCIÓN BOTÓN "VER SERVICIOS" EN MODO CLARO
-===================================================== */
-
-body.light-mode .hero .btn--ghost,
-body.light-mode .hero__cta .btn--ghost,
-body.light-mode a.btn.btn--ghost {
-  background: rgba(255,255,255,.92) !important;
-  color: #111827 !important;
-  border: 1px solid rgba(17,24,39,.28) !important;
-  box-shadow: 0 12px 28px rgba(0,0,0,.08) !important;
-}
-
-body.light-mode .hero .btn--ghost:hover,
-body.light-mode .hero__cta .btn--ghost:hover,
-body.light-mode a.btn.btn--ghost:hover {
-  background: #111827 !important;
-  color: #ffffff !important;
-  border-color: #111827 !important;
-  transform: translateY(-2px);
-}
-
-body.light-mode .hero .btn--ghost *,
-body.light-mode .hero__cta .btn--ghost *,
-body.light-mode a.btn.btn--ghost * {
-  color: inherit !important;
-}
-/* =====================================================
-   CORRECCIÓN DEFINITIVA BOTÓN "VER SERVICIOS" EN MODO CLARO
-===================================================== */
-
-body.light-mode .hero__cta .btn-ver-servicios,
-body.light-mode a.btn-ver-servicios,
-body.light-mode .btn-ver-servicios {
-  background: #ffffff !important;
-  color: #111827 !important;
-  border: 1px solid rgba(17, 24, 39, .35) !important;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, .10) !important;
-  text-shadow: none !important;
-  opacity: 1 !important;
-}
-
-body.light-mode .hero__cta .btn-ver-servicios:link,
-body.light-mode .hero__cta .btn-ver-servicios:visited,
-body.light-mode a.btn-ver-servicios:link,
-body.light-mode a.btn-ver-servicios:visited {
-  color: #111827 !important;
-}
-
-body.light-mode .hero__cta .btn-ver-servicios:hover,
-body.light-mode a.btn-ver-servicios:hover,
-body.light-mode .btn-ver-servicios:hover {
-  background: #111827 !important;
-  color: #ffffff !important;
-  border-color: #111827 !important;
-  box-shadow: 0 18px 38px rgba(0, 0, 0, .16) !important;
-}
-
-body.light-mode .hero__cta .btn-ver-servicios *,
-body.light-mode a.btn-ver-servicios *,
-body.light-mode .btn-ver-servicios * {
-  color: inherit !important;
-}
-/* =====================================================
-   CORRECCIÓN BOTÓN "CONTACTO" EN MODO CLARO
-===================================================== */
-
-body.light-mode .nav .nav__cta,
-body.light-mode .nav__cta,
-body.light-mode a.nav__cta {
-  background: #ffffff !important;
-  color: #111827 !important;
-  border: 1px solid rgba(17, 24, 39, .28) !important;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .08) !important;
-  text-shadow: none !important;
-  opacity: 1 !important;
-}
-
-body.light-mode .nav .nav__cta:link,
-body.light-mode .nav .nav__cta:visited,
-body.light-mode a.nav__cta:link,
-body.light-mode a.nav__cta:visited {
-  color: #111827 !important;
-}
-
-body.light-mode .nav .nav__cta:hover,
-body.light-mode a.nav__cta:hover {
-  background: #111827 !important;
-  color: #ffffff !important;
-  border-color: #111827 !important;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, .14) !important;
-}
-
-body.light-mode .nav .nav__cta *,
-body.light-mode a.nav__cta * {
-  color: inherit !important;
 }
