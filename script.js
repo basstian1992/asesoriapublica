@@ -87,3 +87,40 @@
   if (closePrivacy) closePrivacy.addEventListener("click", closeModal);
   if (closePrivacy2) closePrivacy2.addEventListener("click", closeModal);
 })();
+/* ================================
+   MODO CLARO / OSCURO
+================================ */
+
+(function () {
+  const body = document.body;
+  const toggle = document.getElementById("themeToggle");
+  const icon = document.getElementById("themeToggleIcon");
+  const text = document.getElementById("themeToggleText");
+  const themeColor = document.getElementById("themeColor");
+
+  if (!toggle) return;
+
+  const savedTheme = localStorage.getItem("asesoriaPublicaTheme");
+
+  if (savedTheme === "light") {
+    body.classList.add("light-mode");
+    icon.textContent = "🌙";
+    text.textContent = "Modo oscuro";
+    if (themeColor) themeColor.setAttribute("content", "#f6f3ec");
+  }
+
+  toggle.addEventListener("click", function () {
+    body.classList.toggle("light-mode");
+
+    const isLight = body.classList.contains("light-mode");
+
+    localStorage.setItem("asesoriaPublicaTheme", isLight ? "light" : "dark");
+
+    icon.textContent = isLight ? "🌙" : "☀️";
+    text.textContent = isLight ? "Modo oscuro" : "Modo claro";
+
+    if (themeColor) {
+      themeColor.setAttribute("content", isLight ? "#f6f3ec" : "#0b1020");
+    }
+  });
+})();
