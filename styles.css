@@ -1461,3 +1461,64 @@ body.light-mode .whatsapp-float{
     grid-template-columns:1fr;
   }
 }
+/* =====================================================
+   LOGOS SVG REDES SOCIALES
+===================================================== */
+
+.icon{
+  width:26px;
+  height:26px;
+  display:block;
+  fill:currentColor;
+}
+
+.socialCard__icon{
+  color:#ffffff;
+}
+
+.socialCard__icon .icon{
+  width:30px;
+  height:30px;
+}
+
+.icon-whatsapp{
+  width:28px;
+  height:28px;
+  fill:#ffffff;
+}
+
+/* WhatsApp flotante con logo profesional */
+.whatsapp-float{
+  width:58px !important;
+  min-width:58px !important;
+  height:58px !important;
+  padding:0 !important;
+  border-radius:999px !important;
+  background:linear-gradient(135deg, #25d366, #128c7e) !important;
+  color:#ffffff !important;
+}
+
+.whatsapp-float:hover{
+  transform:translateY(-2px) scale(1.03);
+}
+
+/* Instagram mantiene fondo degradado */
+.socialCard--instagram .socialCard__icon{
+  background:linear-gradient(135deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd) !important;
+  color:#ffffff !important;
+}
+
+/* Facebook mantiene azul oficial */
+.socialCard--facebook .socialCard__icon{
+  background:#1877f2 !important;
+  color:#ffffff !important;
+}
+
+/* Modo claro: los logos siguen visibles */
+body.light-mode .socialCard__icon,
+body.light-mode .socialCard__icon *,
+body.light-mode .whatsapp-float,
+body.light-mode .whatsapp-float *{
+  color:#ffffff !important;
+  fill:currentColor !important;
+}
